@@ -1,0 +1,1685 @@
+<!doctype html>
+<html lang="en">
+
+
+<!-- Mirrored from pixner.net/html/evendo/main/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Jun 2025 00:34:59 GMT -->
+<head>
+    <!-- required meta -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- #keywords -->
+    <meta name="keywords" content="boot, Bootstrap, TEDxMinna">
+    <!-- #description -->
+    <meta name="description" content="TEDxMinna">
+    <!-- #title -->
+    <title>TEDxMinna</title>
+    <!-- #favicon -->
+    <link rel="shortcut icon" href="./main/assets/images/fav.png" type="image/x-icon">
+    <!-- ==== css dependencies start ==== -->
+    <link rel="stylesheet" href="./main/assets/css/style.min.css">
+    <style>
+        html, body {
+          margin: 0;
+          padding: 0;
+        }
+        body {
+          font-family: Arial, sans-serif;
+        }
+        .banner-section {
+          position: relative;
+          width: 100%;
+          height: 100vh;
+        }
+        .swiper-container, .swiper-wrapper, .swiper-slide {
+          width: 100%;
+          height: 100%;
+        }
+        .swiper-slide {
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+          display: flex;
+          align-items: center;
+        }
+        .content-area {
+          color: #fff;
+          padding: 2rem;
+          max-width: 500px;
+          background: rgba(0,0,0,0.3); /* slight overlay for readability */
+          border-radius: 8px;
+        }
+        .content-area p {
+          text-transform: uppercase;
+          font-weight: bold;
+          margin: 0 0 0.5rem 0;
+        }
+        .content-area h2 {
+          font-size: 2.5rem;
+          margin: 0 0 1rem;
+        }
+        .content-area a {
+          display: inline-block;
+          padding: 0.75rem 1.5rem;
+          border: 2px solid #fff;
+          color: #fff;
+          text-decoration: none;
+          transition: all 0.3s ease;
+        }
+        .content-area a:hover {
+          background: #fff;
+          color: #000;
+        }
+        /* Swiper navigation/pagination styles */
+        .swiper-button-next, .swiper-button-prev {
+          color: #fff;
+        }
+        .swiper-pagination-bullet {
+          background: #fff;
+        }
+      </style>
+<!-- In your <head>, add this to import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        background: #000;
+      }
+      .banner-section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+      .swiper-container, .swiper-wrapper, .swiper-slide {
+        width: 100%;
+        height: 100%;
+      }
+      .swiper-slide {
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        align-items: center;
+      }
+      .content-area {
+        max-width: 600px;
+        padding: 2rem;
+        color: #fff;
+        background: rgba(0,0,0,0.25); /* subtle dark overlay */
+        border-radius: 10px;
+        animation: fadeInUp 1s ease forwards;
+      }
+      .content-area p {
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.5rem;
+        color: #ff2c2c; /* TEDx Red accent */
+        font-weight: 600;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+      }
+      .content-area h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        margin: 0 0 1.2rem;
+        color: #fff;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+      }
+      .content-area a {
+        display: inline-block;
+        padding: 0.8rem 1.8rem;
+        border: 2px solid #ff2c2c;
+        background: transparent;
+        color: #ff2c2c;
+        font-weight: bold;
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+      }
+      .content-area a:hover {
+        background: #ff2c2c;
+        color: #fff;
+      }
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .swiper-button-next, .swiper-button-prev {
+        color: #fff;
+      }
+      .swiper-pagination-bullet {
+        background: #fff;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.content-area h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 0.08em;
+  color: #fff;
+  margin: 0 0 1.2rem;
+  text-shadow: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-area h2 span {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeInLetter 0.4s forwards;
+  color: #fff;
+}
+
+@keyframes fadeInLetter {
+  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(20px); }
+}
+
+    </style>
+    
+</head>
+
+<body>
+
+    <!-- start preloader -->
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+    <!-- end preloader -->
+
+    <!-- Scroll To Top Start-->
+    <div class="scroll-wrapper z-2 d-flex justify-content-center p-2 rounded-pill position-fixed">
+        <button class="scrollToTop p6-bg-color d-center flex-column rounded-circle" aria-label="scroll Bar Button">
+            <span class="d-center n1-color fs-five">
+                <i class="ph ph-caret-double-up"></i>
+            </span>
+            <span class="n1-color">TOP</span>
+        </button>
+    </div>
+    <!-- Scroll To Top End -->
+
+    <!-- Start Custom Cursor -->
+    <div class="mouse-follower">
+        <span class="cursor-outline"></span>
+        <span class="cursor-dot"></span>
+    </div>
+    <!-- End Custom Cursor -->
+
+    <main class="position-relative">
+
+        <!-- header-section start -->
+        <!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top px-4 border-bottom border-white border-opacity-10">
+    <div class="container-fluid">
+      <!-- Logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="./main/assets/images/TedXMinna logo.png" alt="TEDx Minna" style="height:40px;">
+      </a>
+  
+      <!-- Mobile Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Nav Links -->
+      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+        <ul class="navbar-nav gap-3 text-center">
+          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="./main/about-us.html">About</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="./main/speakers.html">Speakers</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="./main/event-list.html">Program</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="partners.html">partners</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="past-events.html">Past Events</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="./main/contact.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Search + Tickets -->
+      <div class="d-none d-lg-flex align-items-center gap-3">
+        <!-- Search Icon -->
+        <a href="#" class="text-white fs-4"><i class="ph ph-magnifying-glass"></i></a>
+  
+        <!-- Tickets Button -->
+        <a href="./main/ticket.html" class="btn text-uppercase fw-bold rounded-pill px-4" style="background-color: #ff2b06a9;color: white;">Get Tickets</a>
+      </div>
+    </div>
+  </nav>
+  
+          
+          
+        <!-- header-section end -->
+    
+        <!-- sidebar section start-->
+        <!-- <div class="sidebar-wrapper">
+            <div class="side-menubar d-flex gap-4 gap-md-6 align-items-center n2-bg-color">
+                <div class="d-none d-xl-flex flex-column h-100 justify-content-between align-items-center py-4 py-md-8">
+                    <a href="index.html" class="nav-brand d-grid gap-12">
+                        <span class="d-center">
+                            <img src="./main/assets/images/fav.png" alt="fav">
+                        </span>
+                        <span class="d-center">
+                            <img src="./main/assets/images/logo-text-2.png" class="logo" alt="logo">
+                        </span>
+                    </a>
+                    <div class="newsletter-wrapper sidebar-items mt-12">
+                        <div class="single-item target-item">
+                            <div class="cmn-head d-center">
+                                <button class="newsletter-activator box-style box-second rounded-circle d-center box-area box-one" type="button">
+                                    <span class="d-center fs-four n1-color">
+                                        <i class="ph ph-list"></i>
+                                    </span>
+                                </button>
+                            </div>
+                            <div class="nav-items-wrapper d-flex flex-column p-4 p-sm-7 justify-content-center position-fixed top-0 end-0 bottom-0 w-100 n2-bg-color">
+                                <button class="position-absolute close-btn d-center gap-1">
+                                    <span>CLOSE</span>
+                                    <span class="d-center fs-five n1-color">
+                                        <i class="ph ph-x"></i>
+                                    </span>
+                                </button>
+                                <div class="nav-items text-center d-grid gap-8 gap-md-15">
+                                    <a href="index.html" class="nav-brand-area d-center gap-2">
+                                        <span class="d-center">
+                                            <img src="./main/assets/images/fav.png" alt="fav">
+                                        </span>
+                                        <span class="d-center">
+                                            <img src="./main/assets/images/logo-text-2.png" class="logo" alt="logo">
+                                        </span>
+                                    </a>
+                                    <div class="instagram-area px-0 px-md-16">
+                                        <h5 class="mb-2 n1-color">//INSTAGRAM</h5>
+                                        <div class="d-inline-flex flex-column gap-2">
+                                            <div class="row g-2 d-inline-flex justify-content-center">
+                                                <div class="col-4">
+                                                    <div class="image-box d-center">
+                                                        <img src="./main/assets/images/team-img-1.webp" alt="Image">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="image-box d-center">
+                                                        <img src="./main/assets/images/team-img-3.webp" alt="Image">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="image-box d-center">
+                                                        <img src="./main/assets/images/team-img-2.webp" alt="Image">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row g-2 d-inline-flex justify-content-center">
+                                                <div class="col-4">
+                                                    <div class="image-box d-center">
+                                                        <img src="./main/assets/images/team-img-4.webp" alt="Image">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="image-box d-center">
+                                                        <img src="./main/assets/images/team-img-5.webp" alt="Image">
+                                                    </div>
+                                                </div>
+                                                <div class="col-4">
+                                                    <div class="image-box d-center">
+                                                        <img src="./main/assets/images/team-img-4.webp" alt="Image">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-0 px-md-20">
+                                        <div class="single-box address">
+                                            <ul class="d-grid gap-3 gap-md-4">
+                                                <li class="d-flex align-items-center gap-3">
+                                                    <span class="box-area d-center rounded-circle n1-2nd-bg-color n1-color fs-six box-area box-three">
+                                                        <i class="ph ph-envelope-open"></i>
+                                                    </span>
+                                                    <span class="n1-color text-start"><a href="https://pixner.net/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7712011219131837120f161a071b125914181a">[email&#160;protected]</a></span>
+                                                </li>
+                                                <li class="d-flex align-items-center gap-3">
+                                                    <span class="box-area d-center rounded-circle n1-2nd-bg-color n1-color fs-six box-area box-three">
+                                                        <i class="ph ph-map-pin"></i>
+                                                    </span>
+                                                    <span class="n1-color text-start">1750 Ranchero Rd, Kerrville, Texas 78028</span>
+                                                </li>
+                                                <li class="d-flex align-items-center gap-3">
+                                                    <span class="box-area d-center rounded-circle n1-2nd-bg-color n1-color fs-six box-area box-three">
+                                                        <i class="ph ph-map-pin"></i>
+                                                    </span>
+                                                    <a href="tel:+1-212-9876543" class="n1-color text-start">+1-212-9876543</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="social-area">
+                                        <h5 class="mb-2 n1-color">//FOLLOW US</h5>
+                                        <ul class="d-center gap-2 gap-md-3 social-area second">
+                                            <li>
+                                                <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center n1-2nd-bg-color transition">
+                                                    <span class="d-center fs-seven n1-color">
+                                                        <i class="fab fa-facebook-f"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://twitter.com/" aria-label="Twitter" class="d-center n1-2nd-bg-color transition">
+                                                    <span class="d-center fs-seven n1-color">
+                                                        <i class="fab fa-twitter"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center n1-2nd-bg-color transition">
+                                                    <span class="d-center fs-seven n1-color">
+                                                        <i class="fab fa-instagram"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.dribbble.com/" aria-label="dribbble" class="d-center n1-2nd-bg-color transition">
+                                                    <span class="d-center fs-seven n1-color">
+                                                        <i class="fa-brands fa-dribbble"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.youtube.com/" aria-label="youtube" class="d-center n1-2nd-bg-color transition">
+                                                    <span class="d-center fs-seven n1-color">
+                                                        <i class="fa-brands fa-youtube"></i>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-area">
+                        <div class="active-item">
+                            <ul class="d-center d-grid justify-content-start gap-2 gap-md-3 social-area second">
+                                <li>
+                                    <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center n1-2nd-bg-color rounded-circle transition">
+                                        <span class="d-center fs-seven n1-color">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/" aria-label="Twitter" class="d-center n1-2nd-bg-color rounded-circle transition">
+                                        <span class="d-center fs-seven n1-color">
+                                            <i class="fab fa-twitter"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center n1-2nd-bg-color rounded-circle transition">
+                                        <span class="d-center fs-seven n1-color">
+                                            <i class="fab fa-instagram"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.dribbble.com/" aria-label="dribbble" class="d-center n1-2nd-bg-color rounded-circle transition">
+                                        <span class="d-center fs-seven n1-color">
+                                            <i class="fa-brands fa-dribbble"></i>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inactive-item">
+                            <div class="slider-pagination mb-10 d-center flex-column gap-2 fs-five d-center bg-transparent n1-color"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- sidebar section end -->
+
+        <!-- banner section start-->
+        <section class="banner-section">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+          
+                <!-- Slide 1 -->
+                <!-- Slide 1 -->
+<div class="swiper-slide" style="background-image: url('./main/assets/images/banner1.jpg');">
+    <div class="content-area text-center text-white">
+      <p class="fs-30">Bringing Big Ideas to Life Right Here in Minna</p>
+      <h2 class="animated-title fs-20 fw-bold" data-title="TEDxMinna"></h2>
+      <a href="event-list.html" class="btn btn-lg btn-light mt-3">Join the Movement →</a>
+    </div>
+  </div>
+  
+  <!-- Slide 2 -->
+  <div class="swiper-slide" style="background-image: url('./main/assets/images/banner2.jpg');">
+    <div class="content-area text-center text-white">
+      <p class="fs-30">Connecting Brilliant Minds to Shape Tomorrow</p>
+      <h2 class="animated-title fs-20 fw-bold text-start" data-title="Innovate. Inspire. Impact."></h2>
+      <a href="event-list.html" class="btn btn-lg btn-light mt-3">Discover Our Events →</a>
+    </div>
+  </div>
+  
+  <!-- Slide 3 -->
+  <div class="swiper-slide" style="background-image: url('./main/assets/images/banner3.jpg');">
+    <div class="content-area text-center text-white">
+      <p class="fs-30">Empowering Passionate Voices to Lead Change</p>
+      <h2 class="animated-title fs-20 fw-bold" data-title="Dream Big, Act Boldly"></h2>
+      <a href="event-list.html" class="btn btn-lg btn-light mt-3">See Past Speakers →</a>
+    </div>
+  </div>
+  
+              </div>
+              <!-- Pagination and nav -->
+              <div class="swiper-pagination"></div>
+              <!-- <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div> -->
+            </div>
+          </section>
+        <!-- banner section end -->
+        <section class="py-5 mt-5 bg-black text-white text-center">
+            <div class="container">
+              <!-- Mission text -->
+              <h2 class="fw-bold text-uppercase mb-4 text-white">Our Mission</h2>
+              <p class="lead mx-auto mb-5 text-white" style="max-width: 800px;">
+                At TEDxMinna, we aim to showcase bold ideas that inspire innovation, promote collaboration, and empower future leaders across Nigeria and beyond.
+              </p>
+          
+              <!-- Stats -->
+              <div class="row gy-4">
+                <div class="col-6 col-md-3">
+                  <div class="display-4 fw-bold text-danger">50+</div>
+                  <div class="text-uppercase small">Events Held</div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="display-4 fw-bold text-danger">200+</div>
+                  <div class="text-uppercase small">Speakers</div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="display-4 fw-bold text-danger">5M+</div>
+                  <div class="text-uppercase small">Talks Views</div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="display-4 fw-bold text-danger">10K+</div>
+                  <div class="text-uppercase small">Community Members</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        <!-- About Us start -->
+        <section class="podcast-section bg-light py-5">
+            <div class="container position-relative">
+          
+              <!-- Header -->
+              <div class="text-center mb-10">
+                <h2 class="fw-bold text-uppercase text-dark">Podcasts</h2>
+                <p class="text-muted">Watch inspiring talks and conversations.</p>
+              </div>
+          
+              <!-- Carousel -->
+              <div id="podcastCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+          
+                  <!-- Podcast Item -->
+                  <div class="carousel-item active">
+                    <div class="row justify-content-center g-5">
+                  
+                      <!-- Podcast Card -->
+                      <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-lg overflow-hidden rounded-4 bg-white p-3">
+                          <div class="position-relative" style="padding-top: 56.25%;">
+                            <!-- Thumbnail image -->
+                            <img src="/path/to/thumbnail1.jpg" 
+                                 class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover rounded-3" 
+                                 alt="Podcast Thumbnail">
+                      
+                            <!-- Play icon centered -->
+                            <a href="https://www.youtube.com/watch?v=BHACKCNDMW8"
+                               class="position-absolute top-50 start-50 translate-middle btn btn-danger btn-lg rounded-circle d-flex align-items-center justify-content-center"
+                               style="width: 70px; height: 70px;">
+                              <i class="fa-solid fa-play text-white fs-3"></i>
+                            </a>
+                          </div>
+                          <div class="pt-4 text-center">
+                            <h5 class="fw-bold text-dark mb-2 fs-4">Innovating Africa's Future</h5>
+                            <small class="text-muted fs-6">Ibrahim Yusuf</small>
+                          </div>
+                        </div>
+                      </div>
+                      
+                  
+                      <!-- Podcast Card -->
+                      <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-lg overflow-hidden rounded-4 bg-white p-3">
+                          <div class="position-relative" style="padding-top: 56.25%;">
+                            <img src="/path/to/thumbnail2.jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover rounded-3" alt="Podcast Thumbnail">
+                  
+                            <a href="https://www.youtube.com/watch?v=BHACKCNDMW8"
+                               class="position-absolute top-50 start-50 translate-middle btn btn-danger btn-lg rounded-circle d-flex align-items-center justify-content-center"
+                               style="width: 70px; height: 70px;">
+                              <i class="fa-solid fa-play text-white fs-3"></i>
+                            </a>
+                          </div>
+                          <div class="pt-4 text-center">
+                            <h5 class="fw-bold text-dark mb-2 fs-4">Building Sustainable Communities</h5>
+                            <small class="text-muted fs-6">Amina Bello</small>
+                          </div>
+                        </div>
+                      </div>
+                  
+                      <!-- Podcast Card -->
+                      <div class="col-md-6 col-lg-4">
+                        <div class="card border-0 shadow-lg overflow-hidden rounded-4 bg-white p-3">
+                          <div class="position-relative" style="padding-top: 56.25%;">
+                            <img src="/path/to/thumbnail3.jpg" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover rounded-3" alt="Podcast Thumbnail">
+                  
+                            <a href="https://www.youtube.com/watch?v=BHACKCNDMW8"
+                               class="position-absolute top-50 start-50 translate-middle btn btn-danger btn-lg rounded-circle d-flex align-items-center justify-content-center"
+                               style="width: 70px; height: 70px;">
+                              <i class="fa-solid fa-play text-white fs-3"></i>
+                            </a>
+                            
+                          </div>
+                          <div class="pt-4 text-center">
+                            <h5 class="fw-bold text-dark mb-2 fs-4">The Power of Creativity</h5>
+                            <small class="text-muted fs-6">Chike Nwosu</small>
+                          </div>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </div>
+                  
+                  
+          
+                  <!-- Duplicate .carousel-item for more podcasts -->
+          
+                </div>
+          
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#podcastCarousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon bg-dark p-2 rounded-circle" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#podcastCarousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon bg-dark p-2 rounded-circle" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+          
+              </div>
+            </div>
+          </section>
+          
+        <!-- About Us end -->
+
+        <!-- Upcoming Forum start -->
+        <section class="upcoming-forum pt-80 pb-80">
+            <div class="container">
+                <div class="row gy-6 gy-md-0 mb-8 mb-md-15 justify-content-between align-items-end">
+                    <div class="col-md-8 col-lg-8 col-xl-7">
+                        <div class="section-area d-grid gap-3 gap-md-4 reveal-single reveal-text text-one mt-4">
+                            <span class="p6-color fw-semibold">SCHEDULE</span>
+                            <h2 class="fs-two mb-0 text-white">Upcoming Events</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xl-5">
+                        <div class="btn-area d-center justify-content-start justify-content-md-end">
+                            <a href="event-list.html" class="box-style box-second first-alt d-center gap-2 py-2 py-md-3 px-3 px-md-4 px-lg-6">
+                                <span class="fs-seven">More Events</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="singleTab s1-bg-color p-4 p-md-6 p-lg-10">
+                        <div class="d-center gap-4 gap-md-6 flex-wrap justify-content-between mb-8 mb-md-15">
+                            <h4 class="fw-bold n2-color">Conference Program</h4>
+                            <ul class="tabLinks d-center justify-content-start flex-wrap gap-4 gap-md-6 gap-lg-10">
+                                <li class="nav-links active">
+                                    <button class="tablink pb-1 cus-border border-bottom b-second d-grid gap-1">
+                                        <span class="fs-six fw-mid n2-color">First Day</span>
+                                        <span class="fs-nine p6-color">Oct 13, 2025</span>
+                                    </button>
+                                </li>
+                                <li class="nav-links">
+                                    <button class="tablink pb-1 cus-border border-bottom b-second d-grid gap-1">
+                                        <span class="fs-six fw-mid n2-color">Second Day</span>
+                                        <span class="fs-nine p6-color">Nov 15, 2025</span>
+                                    </button>
+                                </li>
+                                <li class="nav-links">
+                                    <button class="tablink pb-1 cus-border border-bottom b-second d-grid gap-1">
+                                        <span class="fs-six fw-mid n2-color">Third Day</span>
+                                        <span class="fs-nine p6-color">Dec 23, 2025</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tabContents">
+                            <div class="tabItem d-grid gap-4 gap-md-6 active">
+                                <div class="single-item d-center align-items-start flex-wrap flex-md-nowrap px-2 px-md-6 gap-3 gap-md-5 gap-lg-7">
+                                    <div class="profile-area d-grid gap-2 gap-md-3">
+                                        <img src="./main/assets/images/user-img-1.webp" class="max-un" alt="user">
+                                        <div class="tablink d-grid gap-1 text-center">
+                                            <span class="fs-seven fw-mid n2-color">Alex Johnson</span>
+                                            <span class="fs-nine p6-color">Speaker</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <a href="event-single.html"><h5 class="n2-color fw-semibold">Conference Opening</h5></a>
+                                        <div class="d-center flex-wrap justify-content-start gap-3 gap-md-4">
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-clock"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">9: am - 10:30 am</span>
+                                            </div>
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-map-pin"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">Minna, Nigeria</span>
+                                            </div>
+                                        </div>
+                                        <p class="n3-color mt-1 mt-lg-2">In the world of digital design, many software tools and online platforms have adopted placeholder text as their standard. Searching for 'placeholder text' reveals a plethora of websites still in development. Over time, different iterations have emerged, often by chance. The beauty of using placeholder text is that it mimics a typical arrangement of characters.</p>
+                                    </div>
+                                </div>
+                                <span class="position-relative cus-border border-bottom b-second"></span>
+                                <div class="single-item d-center align-items-start flex-wrap flex-md-nowrap px-2 px-md-6 gap-3 gap-md-5 gap-lg-7">
+                                    <div class="profile-area d-grid gap-2 gap-md-3">
+                                        <img src="./main/assets/images/user-img-2.webp" class="max-un" alt="user">
+                                        <div class="tablink d-grid gap-1 justify-content-center text-center">
+                                            <span class="fs-seven fw-mid n2-color">Luna Starling</span>
+                                            <span class="fs-nine p6-color">Moderator</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <a href="event-single.html"><h5 class="n2-color fw-semibold">Digital Transformation</h5></a>
+                                        <div class="d-center flex-wrap justify-content-start gap-3 gap-md-4">
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-clock"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">10:00 am - 11:30 am</span>
+                                            </div>
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-map-pin"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">Minna, Nigeria</span>
+                                            </div>
+                                        </div>
+                                        <p class="n3-color mt-1 mt-lg-2">Explore the cutting-edge technologies that are reshaping industries, and how businesses can adapt to stay competitive in a rapidly evolving digital world. A focus on innovation, AI, and automation. Explore the cutting-edge technologies that are reshaping industries, and how businesses can adapt to stay competitive in a rapidly evolving digital world. A focus on innovation, AI, and automation.</p>
+                                    </div>
+                                </div>
+                                <span class="position-relative cus-border border-bottom b-second"></span>
+                                <div class="single-item d-center align-items-start flex-wrap flex-md-nowrap px-2 px-md-6 gap-3 gap-md-5 gap-lg-7">
+                                    <div class="profile-area d-grid gap-2 gap-md-3">
+                                        <img src="./main/assets/images/user-img-3.webp" class="max-un" alt="user">
+                                        <div class="tablink d-grid gap-1 justify-content-center text-center">
+                                            <span class="fs-seven fw-mid n2-color">Michael Davis</span>
+                                            <span class="fs-nine p6-color">Panelist</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <a href="event-single.html"><h5 class="n2-color fw-semibold">The Future of Work</h5></a>
+                                        <div class="d-center flex-wrap justify-content-start gap-3 gap-md-4">
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-clock"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">1:00 pm - 2:30 pm</span>
+                                            </div>
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-map-pin"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">Minna, Nigeria</span>
+                                            </div>
+                                        </div>
+                                        <p class="n3-color mt-1 mt-lg-2">How the rise of remote work, AI integration, and digital collaboration is changing the workforce landscape. A discussion on employee well-being and the gig economy. How the rise of remote work, AI integration, and digital collaboration is changing the workforce landscape. A discussion on employee well-being and the gig economy.</p>
+                                    </div>
+                                </div>
+                                <span class="position-relative cus-border border-bottom b-second"></span>
+                                <div class="single-item d-center align-items-start flex-wrap flex-md-nowrap px-2 px-md-6 gap-3 gap-md-5 gap-lg-7">
+                                    <div class="profile-area d-grid gap-2 gap-md-3">
+                                        <img src="./main/assets/images/user-img-4.webp" class="max-un" alt="user">
+                                        <div class="tablink d-grid gap-1 justify-content-center text-center">
+                                            <span class="fs-seven fw-mid n2-color">Emily Carter</span>
+                                            <span class="fs-nine p6-color">Keynote Speaker</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <a href="event-single.html"><h5 class="n2-color fw-semibold">Innovation in Sustainability</h5></a>
+                                        <div class="d-center flex-wrap justify-content-start gap-3 gap-md-4">
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-clock"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">3:00 pm - 4:30 pm</span>
+                                            </div>
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-map-pin"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">Minna, Nigeria</span>
+                                            </div>
+                                        </div>
+                                        <p class="n3-color mt-1 mt-lg-2">A deep dive into the innovations in sustainable technology that are driving global efforts to tackle climate change. Exploring green energy solutions, recycling technologies, and sustainable manufacturing practices. A deep dive into the innovations in sustainable technology that are driving global efforts to tackle climate change. Exploring green energy solutions, recycling technologies, and sustainable manufacturing practices.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabItem d-grid gap-4 gap-md-6">
+                                <div class="single-item d-center align-items-start flex-wrap flex-md-nowrap px-2 px-md-6 gap-3 gap-md-5 gap-lg-7">
+                                    <div class="profile-area d-grid gap-2 gap-md-3">
+                                        <img src="./main/assets/images/user-img-3.webp" class="max-un" alt="user">
+                                        <div class="tablink d-grid gap-1 justify-content-center text-center">
+                                            <span class="fs-seven fw-mid n2-color">Michael Davis</span>
+                                            <span class="fs-nine p6-color">Panelist</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <a href="event-single.html"><h5 class="n2-color fw-semibold">The Future of Work</h5></a>
+                                        <div class="d-center flex-wrap justify-content-start gap-3 gap-md-4">
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-clock"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">1:00 pm - 2:30 pm</span>
+                                            </div>
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-map-pin"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">Minna, Nigeria</span>
+                                            </div>
+                                        </div>
+                                        <p class="n3-color mt-1 mt-lg-2">How the rise of remote work, AI integration, and digital collaboration is changing the workforce landscape. A discussion on employee well-being and the gig economy. How the rise of remote work, AI integration, and digital collaboration is changing the workforce landscape. A discussion on employee well-being and the gig economy.</p>
+                                    </div>
+                                </div>
+                                <span class="position-relative cus-border border-bottom b-second"></span>
+                                <div class="single-item d-center align-items-start flex-wrap flex-md-nowrap px-2 px-md-6 gap-3 gap-md-5 gap-lg-7">
+                                    <div class="profile-area d-grid gap-2 gap-md-3">
+                                        <img src="./main/assets/images/user-img-1.webp" class="max-un" alt="user">
+                                        <div class="tablink d-grid gap-1 text-center">
+                                            <span class="fs-seven fw-mid n2-color">Alex Johnson</span>
+                                            <span class="fs-nine p6-color">Speaker</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <a href="event-single.html"><h5 class="n2-color fw-semibold">Conference Opening</h5></a>
+                                        <div class="d-center flex-wrap justify-content-start gap-3 gap-md-4">
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-clock"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">9: am - 10:30 am</span>
+                                            </div>
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-map-pin"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">Minna, Nigeria</span>
+                                            </div>
+                                        </div>
+                                        <p class="n3-color mt-1 mt-lg-2">In the world of digital design, many software tools and online platforms have adopted placeholder text as their standard. Searching for 'placeholder text' reveals a plethora of websites still in development. Over time, different iterations have emerged, often by chance. The beauty of using placeholder text is that it mimics a typical arrangement of characters.</p>
+                                    </div>
+                                </div>
+                                <span class="position-relative cus-border border-bottom b-second"></span>
+                                <div class="single-item d-center align-items-start flex-wrap flex-md-nowrap px-2 px-md-6 gap-3 gap-md-5 gap-lg-7">
+                                    <div class="profile-area d-grid gap-2 gap-md-3">
+                                        <img src="./main/assets/images/user-img-4.webp" class="max-un" alt="user">
+                                        <div class="tablink d-grid gap-1 justify-content-center text-center">
+                                            <span class="fs-seven fw-mid n2-color">Emily Carter</span>
+                                            <span class="fs-nine p6-color">Keynote Speaker</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <a href="event-single.html"><h5 class="n2-color fw-semibold">Innovation in Sustainability</h5></a>
+                                        <div class="d-center flex-wrap justify-content-start gap-3 gap-md-4">
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-clock"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">3:00 pm - 4:30 pm</span>
+                                            </div>
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-map-pin"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">Minna, Nigeria</span>
+                                            </div>
+                                        </div>
+                                        <p class="n3-color mt-1 mt-lg-2">A deep dive into the innovations in sustainable technology that are driving global efforts to tackle climate change. Exploring green energy solutions, recycling technologies, and sustainable manufacturing practices. A deep dive into the innovations in sustainable technology that are driving global efforts to tackle climate change. Exploring green energy solutions, recycling technologies, and sustainable manufacturing practices.</p>
+                                    </div>
+                                </div>
+                                <span class="position-relative cus-border border-bottom b-second"></span>
+                                <div class="single-item d-center align-items-start flex-wrap flex-md-nowrap px-2 px-md-6 gap-3 gap-md-5 gap-lg-7">
+                                    <div class="profile-area d-grid gap-2 gap-md-3">
+                                        <img src="./main/assets/images/user-img-2.webp" class="max-un" alt="user">
+                                        <div class="tablink d-grid gap-1 justify-content-center text-center">
+                                            <span class="fs-seven fw-mid n2-color">Luna Starling</span>
+                                            <span class="fs-nine p6-color">Moderator</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <a href="event-single.html"><h5 class="n2-color fw-semibold">Digital Transformation</h5></a>
+                                        <div class="d-center flex-wrap justify-content-start gap-3 gap-md-4">
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-clock"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">10:00 am - 11:30 am</span>
+                                            </div>
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-map-pin"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">Los Angeles, USA</span>
+                                            </div>
+                                        </div>
+                                        <p class="n3-color mt-1 mt-lg-2">Explore the cutting-edge technologies that are reshaping industries, and how businesses can adapt to stay competitive in a rapidly evolving digital world. A focus on innovation, AI, and automation. Explore the cutting-edge technologies that are reshaping industries, and how businesses can adapt to stay competitive in a rapidly evolving digital world. A focus on innovation, AI, and automation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabItem d-grid gap-4 gap-md-6">
+                                <div class="single-item d-center align-items-start flex-wrap flex-md-nowrap px-2 px-md-6 gap-3 gap-md-5 gap-lg-7">
+                                    <div class="profile-area d-grid gap-2 gap-md-3">
+                                        <img src="./main/assets/images/user-img-2.webp" class="max-un" alt="user">
+                                        <div class="tablink d-grid gap-1 justify-content-center text-center">
+                                            <span class="fs-seven fw-mid n2-color">Luna Starling</span>
+                                            <span class="fs-nine p6-color">Moderator</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <a href="event-single.html"><h5 class="n2-color fw-semibold">Digital Transformation</h5></a>
+                                        <div class="d-center flex-wrap justify-content-start gap-3 gap-md-4">
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-clock"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">10:00 am - 11:30 am</span>
+                                            </div>
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-map-pin"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">Los Angeles, USA</span>
+                                            </div>
+                                        </div>
+                                        <p class="n3-color mt-1 mt-lg-2">Explore the cutting-edge technologies that are reshaping industries, and how businesses can adapt to stay competitive in a rapidly evolving digital world. A focus on innovation, AI, and automation. Explore the cutting-edge technologies that are reshaping industries, and how businesses can adapt to stay competitive in a rapidly evolving digital world. A focus on innovation, AI, and automation.</p>
+                                    </div>
+                                </div>
+                                <span class="position-relative cus-border border-bottom b-second"></span>
+                                <div class="single-item d-center align-items-start flex-wrap flex-md-nowrap px-2 px-md-6 gap-3 gap-md-5 gap-lg-7">
+                                    <div class="profile-area d-grid gap-2 gap-md-3">
+                                        <img src="./main/assets/images/user-img-4.webp" class="max-un" alt="user">
+                                        <div class="tablink d-grid gap-1 justify-content-center text-center">
+                                            <span class="fs-seven fw-mid n2-color">Emily Carter</span>
+                                            <span class="fs-nine p6-color">Keynote Speaker</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <a href="event-single.html"><h5 class="n2-color fw-semibold">Innovation in Sustainability</h5></a>
+                                        <div class="d-center flex-wrap justify-content-start gap-3 gap-md-4">
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-clock"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">3:00 pm - 4:30 pm</span>
+                                            </div>
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-map-pin"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">Berlin, Germany</span>
+                                            </div>
+                                        </div>
+                                        <p class="n3-color mt-1 mt-lg-2">A deep dive into the innovations in sustainable technology that are driving global efforts to tackle climate change. Exploring green energy solutions, recycling technologies, and sustainable manufacturing practices. A deep dive into the innovations in sustainable technology that are driving global efforts to tackle climate change. Exploring green energy solutions, recycling technologies, and sustainable manufacturing practices.</p>
+                                    </div>
+                                </div>
+                                <span class="position-relative cus-border border-bottom b-second"></span>
+                                <div class="single-item d-center align-items-start flex-wrap flex-md-nowrap px-2 px-md-6 gap-3 gap-md-5 gap-lg-7">
+                                    <div class="profile-area d-grid gap-2 gap-md-3">
+                                        <img src="./main/assets/images/user-img-3.webp" class="max-un" alt="user">
+                                        <div class="tablink d-grid gap-1 justify-content-center text-center">
+                                            <span class="fs-seven fw-mid n2-color">Michael Davis</span>
+                                            <span class="fs-nine p6-color">Panelist</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <a href="event-single.html"><h5 class="n2-color fw-semibold">The Future of Work</h5></a>
+                                        <div class="d-center flex-wrap justify-content-start gap-3 gap-md-4">
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-clock"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">1:00 pm - 2:30 pm</span>
+                                            </div>
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-map-pin"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">London, UK</span>
+                                            </div>
+                                        </div>
+                                        <p class="n3-color mt-1 mt-lg-2">How the rise of remote work, AI integration, and digital collaboration is changing the workforce landscape. A discussion on employee well-being and the gig economy. How the rise of remote work, AI integration, and digital collaboration is changing the workforce landscape. A discussion on employee well-being and the gig economy.</p>
+                                    </div>
+                                </div>
+                                <span class="position-relative cus-border border-bottom b-second"></span>
+                                <div class="single-item d-center align-items-start flex-wrap flex-md-nowrap px-2 px-md-6 gap-3 gap-md-5 gap-lg-7">
+                                    <div class="profile-area d-grid gap-2 gap-md-3">
+                                        <img src="./main/assets/images/user-img-1.webp" class="max-un" alt="user">
+                                        <div class="tablink d-grid gap-1 text-center">
+                                            <span class="fs-seven fw-mid n2-color">Alex Johnson</span>
+                                            <span class="fs-nine p6-color">Speaker</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-3">
+                                        <a href="event-single.html"><h5 class="n2-color fw-semibold">Conference Opening</h5></a>
+                                        <div class="d-center flex-wrap justify-content-start gap-3 gap-md-4">
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-clock"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">9: am - 10:30 am</span>
+                                            </div>
+                                            <div class="single-date d-center gap-2 n1-bg-color py-1 px-1 px-md-2">
+                                                <span class="d-center p6-color fs-six">
+                                                    <i class="ph ph-map-pin"></i>
+                                                </span>
+                                                <span class="fs-seven n2-color">New York, USA</span>
+                                            </div>
+                                        </div>
+                                        <p class="n3-color mt-1 mt-lg-2">In the world of digital design, many software tools and online platforms have adopted placeholder text as their standard. Searching for 'placeholder text' reveals a plethora of websites still in development. Over time, different iterations have emerged, often by chance. The beauty of using placeholder text is that it mimics a typical arrangement of characters.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Upcoming Forum end -->
+
+        <!-- video section start -->
+        <!-- <section class="video-section pb-120">
+            <div class="container-fluid px-0">
+                <div class="img-area d-center position-relative pt-120 pb-120" data-bg=".//main/assets/images/video-bg-1.webp">
+                    <div class="py-20 my-10 my-md-20">
+                        <div class="video-bg-thumb d-center position-absolute">
+                            <a href="https://www.youtube.com/watch?v=BHACKCNDMW8" class="popup-video btn-popup-animation transition position-absolute z-1 d-center rounded-circle">
+                                <span class="d-center fs-four p6-color z-1">
+                                    <i class="fa-solid fa-play"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- video section end -->
+
+        <!-- Team start -->
+        <section class="team-section position-relative pb-120">
+            <div class="abs-area pe-none">
+                <div class="item position-absolute shape-animation d-none d-lg-block start-0 top-0 ps-12">
+                    <img src="./main/assets/images/shape/team-shape.webp" alt="icon">
+                </div>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-lg-6">
+                        <div class="section-area mt-5 mb-5 mb-md-5 text-center">
+                            <!-- Label -->
+                            <span class="text-danger fw-semibold text-uppercase d-block mb-2">MEET THE SPEAKERS</span>
+                            
+                            <!-- Heading -->
+                            <h2 class="display-5 fw-bold text-white mb-4">Inspiring Voices From Around the World</h2>
+                            
+                            <!-- Optional Subtitle -->
+                            <p class="text-white-50 mx-auto" style="max-width: 700px;">
+                              Our speakers are thought leaders, innovators, and changemakers who will share powerful stories and fresh perspectives.
+                            </p>
+                          </div>
+                          
+                    </div>
+                </div>
+                <div class="row cus-row gy-7 gy-xl-8 justify-content-center justify-content-sm-start">
+                    <div class="col-8 col-sm-6 col-lg-4">
+                        <div class="single-item d-grid gap-3 gap-xl-4 position-relative">
+                            <div class="image-area d-center position-relative">
+                                <img src="./main/assets/images/team-img-1.webp" class="w-100 pe-none" alt="image">
+                                <ul class="d-center hover-active d-grid justify-content-start position-absolute top-0 end-0 m-3 m-md-4 gap-1 gap-md-1 social-area transition">
+                                    <li>
+                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-twitter"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-instagram"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
+                                    <span class="d-center fs-four n1-color">
+                                        <i class="ph ph-microphone"></i>
+                                    </span>
+                                    <span class="fs-seven">Speaker</span>
+                                </span>
+                            </div>
+                            <div class="text-area">
+                                <a href="speakers-single.html"><h5 class="mb-2 n2-color">Lila Thompson</h5></a>
+                                <span class="n3-color fw-bold fs-nine">Director of Sales</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 col-sm-6 col-lg-4">
+                        <div class="single-item d-grid gap-3 gap-xl-4 position-relative">
+                            <div class="image-area d-center position-relative">
+                                <img src="./main/assets/images/team-img-2.webp" class="w-100 pe-none" alt="image">
+                                <ul class="d-center hover-active d-grid justify-content-start position-absolute top-0 end-0 m-3 m-md-4 gap-1 gap-md-1 social-area transition">
+                                    <li>
+                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-twitter"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-instagram"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
+                                    <span class="d-center fs-four n1-color">
+                                        <i class="ph ph-microphone"></i>
+                                    </span>
+                                    <span class="fs-seven">Speaker</span>
+                                </span>
+                            </div>
+                            <div class="text-area">
+                                <a href="speakers-single.html"><h5 class="mb-2 n2-color">John Doe</h5></a>
+                                <span class="n3-color fw-bold fs-nine">Marketing Director</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 col-sm-6 col-lg-4">
+                        <div class="single-item d-grid gap-3 gap-xl-4 position-relative">
+                            <div class="image-area d-center position-relative">
+                                <img src="./main/assets/images/team-img-3.webp" class="w-100 pe-none" alt="image">
+                                <ul class="d-center hover-active d-grid justify-content-start position-absolute top-0 end-0 m-3 m-md-4 gap-1 gap-md-1 social-area transition">
+                                    <li>
+                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-twitter"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-instagram"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
+                                    <span class="d-center fs-four n1-color">
+                                        <i class="ph ph-microphone"></i>
+                                    </span>
+                                    <span class="fs-seven">Speaker</span>
+                                </span>
+                            </div>
+                            <div class="text-area">
+                                <a href="speakers-single.html"><h5 class="mb-2 n2-color">Sarah Jenkins</h5></a>
+                                <span class="n3-color fw-bold fs-nine">Chief Technology Officer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 col-sm-6 col-lg-4">
+                        <div class="single-item d-grid gap-3 gap-xl-4 position-relative">
+                            <div class="image-area d-center position-relative">
+                                <img src="./main/assets/images/team-img-4.webp" class="w-100 pe-none" alt="image">
+                                <ul class="d-center hover-active d-grid justify-content-start position-absolute top-0 end-0 m-3 m-md-4 gap-1 gap-md-1 social-area transition">
+                                    <li>
+                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-twitter"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-instagram"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
+                                    <span class="d-center fs-four n1-color">
+                                        <i class="ph ph-microphone"></i>
+                                    </span>
+                                    <span class="fs-seven">Speaker</span>
+                                </span>
+                            </div>
+                            <div class="text-area">
+                                <a href="speakers-single.html"><h5 class="mb-2 n2-color">Marcus Lee</h5></a>
+                                <span class="n3-color fw-bold fs-nine">Head of Operations</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 col-sm-6 col-lg-4">
+                        <div class="single-item d-grid gap-3 gap-xl-4 position-relative">
+                            <div class="image-area d-center position-relative">
+                                <img src="./main/assets/images/team-img-5.webp" class="w-100 pe-none" alt="image">
+                                <ul class="d-center hover-active d-grid justify-content-start position-absolute top-0 end-0 m-3 m-md-4 gap-1 gap-md-1 social-area transition">
+                                    <li>
+                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-twitter"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-instagram"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
+                                    <span class="d-center fs-four n1-color">
+                                        <i class="ph ph-microphone"></i>
+                                    </span>
+                                    <span class="fs-seven">Speaker</span>
+                                </span>
+                            </div>
+                            <div class="text-area">
+                                <a href="speakers-single.html"><h5 class="mb-2 n2-color">Rachel Green</h5></a>
+                                <span class="n3-color fw-bold fs-nine">Creative Director</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 col-sm-6 col-lg-4">
+                        <div class="single-item d-grid gap-3 gap-xl-4 position-relative">
+                            <div class="image-area d-center position-relative">
+                                <img src="./main/assets/images/team-img-6.webp" class="w-100 pe-none" alt="image">
+                                <ul class="d-center hover-active d-grid justify-content-start position-absolute top-0 end-0 m-3 m-md-4 gap-1 gap-md-1 social-area transition">
+                                    <li>
+                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-twitter"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fab fa-instagram"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item transition">
+                                            <span class="d-center fs-six n1-color">
+                                                <i class="fa-brands fa-youtube"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
+                                    <span class="d-center fs-four n1-color">
+                                        <i class="ph ph-microphone"></i>
+                                    </span>
+                                    <span class="fs-seven">Speaker</span>
+                                </span>
+                            </div>
+                            <div class="text-area">
+                                <a href="speakers-single.html"><h5 class="mb-2 n2-color">David Warner</h5></a>
+                                <span class="n3-color fw-bold fs-nine">Lead Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Team end -->
+        
+        <!-- Marque Section start -->
+        <!-- <section class="marquee-section">
+            <div class="swiper carousel-infinity">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide d-center mx-4 mx-md-7">
+                        <div class="item-area d-center gap-8 gap-md-15 reveal-single reveal-text text-three">
+                            <span class="img-area">
+                                <img src="./main/assets/images/icon/marque-icon-1.webp" class="max-un" alt="icon">
+                            </span>
+                            <span class="n2-color display-one text-uppercase text-nowrap">Keynote Speakers</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-center mx-4 mx-md-7">
+                        <div class="item-area d-center gap-8 gap-md-15 reveal-single reveal-text text-three">
+                            <span class="img-area">
+                                <img src="./main/assets/images/icon/marque-icon-2.webp" class="max-un" alt="icon">
+                            </span>
+                            <span class="n2-color display-one text-uppercase text-nowrap">Unique Experiences</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-center mx-4 mx-md-7">
+                        <div class="item-area d-center gap-8 gap-md-15 reveal-single reveal-text text-three">
+                            <span class="img-area">
+                                <img src="./main/assets/images/icon/marque-icon-3.webp" class="max-un" alt="icon">
+                            </span>
+                            <span class="n2-color display-one text-uppercase text-nowrap">Networking Opportunities</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide d-center mx-4 mx-md-7">
+                        <div class="item-area d-center gap-8 gap-md-15 reveal-single reveal-text text-three">
+                            <span class="img-area">
+                                <img src="./main/assets/images/icon/marque-icon-4.webp" class="max-un" alt="icon">
+                            </span>
+                            <span class="n2-color display-one text-uppercase text-nowrap">Global Reach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- Marque Section end -->
+
+        <!-- Blog Section start -->
+        <section class="blog-section pt-60 pb-120">
+            <div class="container">
+                <div class="row gy-6 gy-md-0 mb-8 mb-md-15 justify-content-between align-items-end">
+                    <div class="col-md-8 col-lg-8 col-xl-7">
+                        <div class="section-area d-grid gap-3 gap-md-4 reveal-single reveal-text text-one">
+                            <span class="p6-color fw-bold">BLOG</span>
+                            <h2 class="fs-two">Insider Tips from the Top</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xl-5">
+                        <div class="btn-area d-center justify-content-start justify-content-md-end">
+                            <a style="background-color: #ff2b06a9;color: white;" href="./main/blog-2.html" class="box-style box-second first-alt d-center gap-2 py-2 py-md-3 px-3 px-md-4 px-lg-6">
+                                <span class="fs-seven">More Blogs</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row cus-row gy-7 gy-lg-0 justify-content-center justify-content-sm-start">
+                    <div class="col-8 col-sm-6 col-lg-4">
+                        <div class="single-item d-grid gap-4 gap-md-6">
+                            <div class="profile-area">
+                                <img src="./main/assets/images/blog-img-1.webp" class="w-100" alt="user">
+                            </div>
+                            <div class="d-grid gap-3">
+                                <span class="p6-color fw-semibold fs-nine">INSIGHT</span>
+                                <a href="./main/blog-single.html"><h4 class="n2-color fw-semibold">Expert Tips for Thriving in a Competitive Market</h4></a>
+                                <div class="d-center justify-content-start gap-3 gap-md-4 mt-2 mt-md-3">
+                                    <div class="single-date d-center gap-1">
+                                        <span class="d-center p6-color fs-five">
+                                            <i class="ph ph-calendar-blank"></i>
+                                        </span>
+                                        <span class="n3-color">Oct 17, 2025</span>
+                                    </div>
+                                    <div class="single-date d-center gap-1">
+                                        <span class="d-center p6-color fs-five">
+                                            <i class="ph ph-messenger-logo"></i>
+                                        </span>
+                                        <span class="n3-color">Comment</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 col-sm-6 col-lg-4">
+                        <div class="single-item d-grid gap-4 gap-md-6">
+                            <div class="profile-area">
+                                <img src="./main/assets/images/blog-img-2.webp" class="w-100" alt="user">
+                            </div>
+                            <div class="d-grid gap-3">
+                                <span class="p6-color fw-semibold fs-nine">BUSINESS</span>
+                                <a href="./main/blog-single.html"><h4 class="n2-color fw-semibold">Secrets to Building a Scalable Business Model</h4></a>
+                                <div class="d-center justify-content-start gap-3 gap-md-4 mt-2 mt-md-3">
+                                    <div class="single-date d-center gap-1">
+                                        <span class="d-center p6-color fs-five">
+                                            <i class="ph ph-calendar-blank"></i>
+                                        </span>
+                                        <span class="n3-color">Nov 12, 2025</span>
+                                    </div>
+                                    <div class="single-date d-center gap-1">
+                                        <span class="d-center p6-color fs-five">
+                                            <i class="ph ph-messenger-logo"></i>
+                                        </span>
+                                        <span class="n3-color">Comment</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8 col-sm-6 col-lg-4">
+                        <div class="single-item d-grid gap-4 gap-md-6">
+                            <div class="profile-area">
+                                <img src="./main/assets/images/blog-img-3.webp" class="w-100" alt="user">
+                            </div>
+                            <div class="d-grid gap-3">
+                                <span class="p6-color fw-semibold fs-nine">INSIGHT</span>
+                                <a href="./main/blog-single.html"><h4 class="n2-color fw-semibold">Future Trends Every Business Leader Should Know</h4></a>
+                                <div class="d-center justify-content-start gap-3 gap-md-4 mt-2 mt-md-3">
+                                    <div class="single-date d-center gap-1">
+                                        <span class="d-center p6-color fs-five">
+                                            <i class="ph ph-calendar-blank"></i>
+                                        </span>
+                                        <span class="n3-color">Dec 28, 2025</span>
+                                    </div>
+                                    <div class="single-date d-center gap-1">
+                                        <span class="d-center p6-color fs-five">
+                                            <i class="ph ph-messenger-logo"></i>
+                                        </span>
+                                        <span class="n3-color">Comment</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Section end -->
+        
+        <!-- Packages start -->
+        <section class="ticketing-section position-relative pt-60 pb-120">
+            <div class="container">
+          
+              <!-- Title -->
+              <div class="row mb-8 mb-md-15">
+                <div class="col-12 text-center">
+                  <span class="p6-color fw-semibold text-uppercase">Ticket Options</span>
+                  <h2 class="fs-two n1-color">Get Your Tickets</h2>
+                </div>
+              </div>
+          
+              <!-- Tickets -->
+              <div class="row gy-7 gy-xl-8 justify-content-center">
+          
+                <!-- Regular Ticket -->
+                <div class="col-10 col-md-4 order-1 order-md-1">
+                  <div class="ticket-card p-4 p-md-6 d-grid gap-4 border rounded text-center">
+                    <h5 class="n1-color">Regular</h5>
+                    <p class="n1-color fs-six">Access to all sessions & basic materials.</p>
+                    <div class="price fs-two fw-bold n1-color">₦9,000</div>
+                    <a href="checkout.html?type=regular" class="btn btn-outline-secondary w-100">Buy Regular</a>
+                  </div>
+                </div>
+          
+                <!-- VVIP Ticket (CENTERED) -->
+                <div class="col-10 col-md-4 order-3 order-md-2">
+                  <div class="ticket-card p-4 p-md-6 d-grid gap-4 border rounded text-center n1-bg-color">
+                    <h5 class="n2-color">VVIP</h5>
+                    <p class="n2-color fs-six">Front-row seating, exclusive perks & speaker meet-and-greet.</p>
+                    <div class="price fs-two fw-bold n2-color">₦50,000</div>
+                    <!-- Red button -->
+                    <a href="checkout.html?type=vvip" class="btn w-100" style="background-color: #ff2c2cdc;">Buy VVIP</a>
+                  </div>
+                </div>
+          
+                <!-- VIP Ticket -->
+                <div class="col-10 col-md-4 order-2 order-md-3">
+                  <div class="ticket-card p-4 p-md-6 d-grid gap-4 border rounded text-center">
+                    <h5 class="n1-color">VIP</h5>
+                    <p class="n1-color fs-six">Priority seating, exclusive lounge & perks.</p>
+                    <div class="price fs-two fw-bold n1-color">₦29,000</div>
+                    <a href="checkout.html?type=vip" class="btn btn-outline-secondary w-100">Buy VIP</a>
+                  </div>
+                </div>
+          
+              </div>
+            </div>
+          </section>
+        <!-- Packages end -->
+
+        <section class="py-5" style="background-color: #ff2b06a9;color: white;">
+            <div class="container">
+              <h2 class="fw-bold mb-3 text-white">Let's Stay Connected</h2>
+              <p class="text-white">Join our mailing list to be the first to receive updates on TEDxMinna events, ticket releases, exclusive interviews, and much more.</p>
+              <form class="row g-2 align-items-center mt-3">
+                <div class="col-12 col-md-3">
+                  <input type="text" class="form-control" placeholder="First Name" required>
+                </div>
+                <div class="col-12 col-md-3">
+                  <input type="text" class="form-control" placeholder="Last Name" required>
+                </div>
+                <div class="col-12 col-md-4">
+                  <input type="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="col-12 col-md-2">
+                  <button class="btn btn-dark w-100" type="submit">SUBSCRIBE</button>
+                </div>
+              </form>
+              <small class="d-block mt-3">Your privacy is important. See our <a href="#" class="text-white text-decoration-underline">privacy policy</a>.</small>
+            </div>
+          </section>
+
+          <footer class="bg-black text-white py-5">
+            <div class="container">
+          
+              <!-- Search & Socials -->
+              <div class="row align-items-center mb-4">
+                <div class="col-12 col-md-6 mb-3 mb-md-0">
+                  <input class="form-control" type="search" placeholder="Search TEDxMinna…">
+                </div>
+                <div class="col-12 col-md-6 text-md-end">
+                  <a href="#" class="text-white me-3 fs-4"><i class="bi bi-envelope"></i></a>
+                  <a href="#" class="text-white me-3 fs-4"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="text-white me-3 fs-4"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+          
+              <!-- Links -->
+              <div class="row gy-3 mb-4">
+                <div class="col-6 col-md-3">
+                  <h6 class="fw-bold">About</h6>
+                  <ul class="list-unstyled mb-0">
+                    <li><a href="#" class="text-white opacity-75 text-decoration-none">Our Mission</a></li>
+                    <li><a href="#" class="text-white opacity-75 text-decoration-none">Team</a></li>
+                    <li><a href="#" class="text-white opacity-75 text-decoration-none">Contact</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                  <h6 class="fw-bold">Get Involved</h6>
+                  <ul class="list-unstyled mb-0">
+                    <li><a href="#" class="text-white opacity-75 text-decoration-none">Become a Speaker</a></li>
+                    <li><a href="#" class="text-white opacity-75 text-decoration-none">Partner With Us</a></li>
+                    <li><a href="#" class="text-white opacity-75 text-decoration-none">Volunteer</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                  <h6 class="fw-bold">Events</h6>
+                  <ul class="list-unstyled mb-0">
+                    <li><a href="#" class="text-white opacity-75 text-decoration-none">Upcoming Events</a></li>
+                    <li><a href="#" class="text-white opacity-75 text-decoration-none">Past Talks</a></li>
+                    <li><a href="#" class="text-white opacity-75 text-decoration-none">Podcast</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                  <h6 class="fw-bold">More</h6>
+                  <ul class="list-unstyled mb-0">
+                    <li><a href="#" class="text-white opacity-75 text-decoration-none">TED.com</a></li>
+                    <li><a href="#" class="text-white opacity-75 text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="#" class="text-white opacity-75 text-decoration-none">Terms & Conditions</a></li>
+                  </ul>
+                </div>
+              </div>
+          
+              <!-- Description -->
+              <div class="row">
+                <div class="col-12">
+                  <p class="small opacity-75 mb-0">
+                    <strong>About TEDxMinna:</strong> TEDxMinna is a locally organized, nonprofit event celebrating ideas worth spreading. We bring together inspiring speakers, artists, and changemakers to create conversations that ignite innovation and community action across Niger State.
+                  </p>
+                </div>
+              </div>
+          
+              <!-- Bottom -->
+              <div class="row mt-4 border-top border-secondary pt-3">
+                <div class="col text-center">
+                  <small>&copy; <span id="year"></span> TEDxMinna. Organized under license from TED.</small>
+                </div>
+              </div>
+          
+            </div>
+          </footer>
+          
+          <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+          </script>
+          
+
+        <!-- Footer Area Start -->
+          
+          <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+          </script>
+          
+        <!-- Footer Area End -->
+
+    </main>
+    
+    <!-- ==== js dependencies start ==== -->
+    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./main/assets/js/plugins/plugins.js"></script>
+    <script src="./main/assets/js/plugins/plugin-custom.js"></script>
+    <script src="./main/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  });
+</script>
+<script>
+    document.querySelectorAll('.animated-title').forEach((title) => {
+  const text = title.getAttribute('data-title');
+  title.innerHTML = '';
+  const words = text.split(' '); // split into words
+  
+  words.forEach((word, wIndex) => {
+    word.split('').forEach((char, index) => {
+      const span = document.createElement('span');
+      span.textContent = char;
+      span.style.animationDelay = `${(wIndex * word.length + index) * 0.1}s`;
+      title.appendChild(span);
+    });
+    title.appendChild(document.createTextNode(' ')); // real space so it can wrap
+  });
+});
+
+  </script>
+  
+</body>
+
+
+<!-- Mirrored from pixner.net/html/evendo/main/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Jun 2025 00:35:13 GMT -->
+</html>
