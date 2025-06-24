@@ -213,41 +213,44 @@
 
         <!-- header-section start -->
         <!-- Header -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top px-4 border-bottom border-white border-opacity-10">
-    <div class="container-fluid">
-      <!-- Logo -->
-      <a class="navbar-brand" href="index.html">
-        <img src="./main/assets/images/TedXMinna logo.png" alt="TEDx Minna" style="height:40px;">
-      </a>
-  
-      <!-- Mobile Toggler -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <!-- Nav Links -->
-      <div class="collapse navbar-collapse justify-content-center" id="mainNav">
-        <ul class="navbar-nav gap-3 text-center">
-          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="./main/about-us.html">About</a></li>
-          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="./main/speakers.html">Speakers</a></li>
-          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="./main/event-list.html">Program</a></li>
-          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="partners.html">partners</a></li>
-          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="past-events.html">Past Events</a></li>
-          <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="./main/contact.html">Contact</a></li>
-        </ul>
-      </div>
-  
-      <!-- Search + Tickets -->
-      <div class="d-none d-lg-flex align-items-center gap-3">
-        <!-- Search Icon -->
-        <a href="#" class="text-white fs-4"><i class="ph ph-magnifying-glass"></i></a>
-  
-        <!-- Tickets Button -->
-        <a href="./main/ticket.html" class="btn text-uppercase fw-bold rounded-pill px-4" style="background-color: #ff2b06a9;color: white;">Get Tickets</a>
-      </div>
-    </div>
-  </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top px-4 border-bottom border-white border-opacity-10">
+            <div class="container-fluid">
+              <!-- Logo -->
+              <a class="navbar-brand" href="index.html">
+                <img src="./main/assets/images/logo.png" alt="TEDx Minna" style="height:40px;">
+              </a>
+          
+              <!-- Mobile Toggler -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <!-- Nav Links -->
+              <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+                <ul class="navbar-nav gap-3 text-center">
+                  <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="index.html">Home</a></li>
+                  <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="./main/about-us.html">About</a></li>
+                  <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="./main/speakers.html">Speakers</a></li>
+                  <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="./main/event-list.html">Program</a></li>
+                  <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="partners.html">Partners</a></li>
+                  <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="past-events.html">Past Events</a></li>
+                  <li class="nav-item"><a class="nav-link fw-bold text-white text-uppercase" href="./main/contact.html">Contact</a></li>
+          
+                  <!-- MOBILE-ONLY Tickets -->
+                  <li class="nav-item d-lg-none mt-2">
+                    <a href="./main/ticket.html" class="btn w-100 text-uppercase fw-bold rounded-pill px-4" style="background-color: #ff2b06a9; color: white;">Get Tickets</a>
+                  </li>
+                </ul>
+              </div>
+          
+              <!-- Desktop-only Search + Tickets -->
+              <div class="d-none d-lg-flex align-items-center gap-3">
+                <a href="#" class="text-white fs-4"><i class="ph ph-magnifying-glass"></i></a>
+                <a href="./main/ticket.html" class="btn text-uppercase fw-bold rounded-pill px-4" style="background-color: #ff2b06a9; color: white;">Get Tickets</a>
+              </div>
+            </div>
+          </nav>
+          
   
           
           
@@ -1384,7 +1387,7 @@
                 <div class="row gy-6 gy-md-0 mb-8 mb-md-15 justify-content-between align-items-end">
                     <div class="col-md-8 col-lg-8 col-xl-7">
                         <div class="section-area d-grid gap-3 gap-md-4 reveal-single reveal-text text-one">
-                            <span class="p6-color fw-bold">BLOG</span>
+                            <span class="p6-color fs-30 fw-bold">BLOG</span>
                             <h2 class="fs-two">Insider Tips from the Top</h2>
                         </div>
                     </div>
@@ -1478,54 +1481,84 @@
         <!-- Blog Section end -->
         
         <!-- Packages start -->
-        <section class="ticketing-section position-relative pt-60 pb-120">
+        <section class="packages-section s1-bg-color position-relative pt-120 pb-120">
+            <!-- Ticket Packages Header -->
+<section class="text-center mb-4 mb-md-8">
+    <div class="container">
+      <div class="d-grid gap-3 gap-md-4 reveal-single reveal-text text-three">
+        <span class="p6-color fs-two fw-bold">TICKET PACKAGES</span>
+        <h2 class="fs-two n2-color">Secure Your Spot</h2>
+        <p class="n3-color mx-auto" style="max-width: 600px;">
+          Choose a ticket that suits your experience — from regular admission to premium VIP options.
+          Unlock exclusive perks and make the most of your TEDxMinna 2025 event.
+        </p>
+      </div>
+    </div>
+  </section>
+  
             <div class="container">
+              <div class="row gy-4 gy-xl-5 justify-content-center">
           
-              <!-- Title -->
-              <div class="row mb-8 mb-md-15">
-                <div class="col-12 text-center">
-                  <span class="p6-color fw-semibold text-uppercase">Ticket Options</span>
-                  <h2 class="fs-two n1-color">Get Your Tickets</h2>
-                </div>
-              </div>
-          
-              <!-- Tickets -->
-              <div class="row gy-7 gy-xl-8 justify-content-center">
-          
-                <!-- Regular Ticket -->
-                <div class="col-10 col-md-4 order-1 order-md-1">
-                  <div class="ticket-card p-4 p-md-6 d-grid gap-4 border rounded text-center">
-                    <h5 class="n1-color">Regular</h5>
-                    <p class="n1-color fs-six">Access to all sessions & basic materials.</p>
-                    <div class="price fs-two fw-bold n1-color">₦9,000</div>
-                    <a href="checkout.html?type=regular" class="btn btn-outline-secondary w-100">Buy Regular</a>
+                <!-- Regular Pass -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                  <div class="single-item p-3 p-md-6 p-lg-8 d-flex flex-column gap-4 gap-xl-6 n1-bg-color rounded-4 shadow-lg text-center w-100 h-100">
+                    <h6 class="fs-4 fw-semibold n2-color">Regular Pass</h6>
+                    <span class="fs-two fw-bold n2-color">₦5,000</span>
+                    <div class="features-area my-4 my-xl-6 text-start flex-grow-1">
+                      <ul class="d-grid gap-3 gap-xl-4">
+                        <li><i class="ph ph-check text-success"></i> General Admission</li>
+                        <li><i class="ph ph-check text-success"></i> Access to all sessions</li>
+                        <li><i class="ph ph-check text-success"></i> Basic Networking</li>
+                      </ul>
+                    </div>
+                    <a href="sign-up.html" class="box-style box-second first-alt w-100 d-center gap-2 py-2 py-md-3 px-3 px-md-6 mt-auto">
+                      <span class="fs-seven">Get Regular Pass</span>
+                    </a>
                   </div>
                 </div>
           
-                <!-- VVIP Ticket (CENTERED) -->
-                <div class="col-10 col-md-4 order-3 order-md-2">
-                  <div class="ticket-card p-4 p-md-6 d-grid gap-4 border rounded text-center n1-bg-color">
-                    <h5 class="n2-color">VVIP</h5>
-                    <p class="n2-color fs-six">Front-row seating, exclusive perks & speaker meet-and-greet.</p>
-                    <div class="price fs-two fw-bold n2-color">₦50,000</div>
-                    <!-- Red button -->
-                    <a href="checkout.html?type=vvip" class="btn w-100" style="background-color: #ff2c2cdc;">Buy VVIP</a>
+                <!-- VVIP Pass (center column) -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                  <div class="single-item p-3 p-md-6 p-lg-8 d-flex flex-column gap-4 gap-xl-6 n1-bg-color rounded-4 shadow-xl border border-warning text-center w-100 h-100">
+                    <h6 class="fs-4 fw-semibold n2-color">VVIP Pass</h6>
+                    <span class="fs-two fw-bold n2-color">₦35,000</span>
+                    <div class="features-area my-4 my-xl-6 text-start flex-grow-1">
+                      <ul class="d-grid gap-3 gap-xl-4">
+                        <li><i class="ph ph-check text-success"></i> Reserved Front-Row Seating</li>
+                        <li><i class="ph ph-check text-success"></i> Private Dinner with Speakers</li>
+                        <li><i class="ph ph-check text-success"></i> Exclusive Merchandise Pack</li>
+                        <li><i class="ph ph-check text-success"></i> All Recordings & Premium Access</li>
+                      </ul>
+                    </div>
+                    <a href="ticket-single.html" class="box-style box-second first-alt w-100 d-center gap-2 py-2 py-md-3 px-3 px-md-6 mt-auto">
+                      <span class="fs-seven">Get VVIP Pass</span>
+                    </a>
                   </div>
                 </div>
           
-                <!-- VIP Ticket -->
-                <div class="col-10 col-md-4 order-2 order-md-3">
-                  <div class="ticket-card p-4 p-md-6 d-grid gap-4 border rounded text-center">
-                    <h5 class="n1-color">VIP</h5>
-                    <p class="n1-color fs-six">Priority seating, exclusive lounge & perks.</p>
-                    <div class="price fs-two fw-bold n1-color">₦29,000</div>
-                    <a href="checkout.html?type=vip" class="btn btn-outline-secondary w-100">Buy VIP</a>
+                <!-- VIP Pass -->
+                <div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+                  <div class="single-item p-3 p-md-6 p-lg-8 d-flex flex-column gap-4 gap-xl-6 n1-bg-color rounded-4 shadow-lg text-center w-100 h-100">
+                    <h6 class="fs-4 fw-semibold n2-color">VIP Pass</h6>
+                    <span class="fs-two fw-bold n2-color">₦15,000</span>
+                    <div class="features-area my-4 my-xl-6 text-start flex-grow-1">
+                      <ul class="d-grid gap-3 gap-xl-4">
+                        <li><i class="ph ph-check text-success"></i> Priority Seating</li>
+                        <li><i class="ph ph-check text-success"></i> Networking Lounge Access</li>
+                        <li><i class="ph ph-check text-success"></i> Event Souvenirs</li>
+                        <li><i class="ph ph-check text-success"></i> Post-Event Recordings</li>
+                      </ul>
+                    </div>
+                    <a href="sign-up.html" class="box-style box-second first-alt w-100 d-center gap-2 py-2 py-md-3 px-3 px-md-6 mt-auto">
+                      <span class="fs-seven">Get VIP Pass</span>
+                    </a>
                   </div>
                 </div>
           
               </div>
             </div>
           </section>
+          
         <!-- Packages end -->
 
         <section class="py-5" style="background-color: #ff2b06a9;color: white;">
