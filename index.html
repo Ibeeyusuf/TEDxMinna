@@ -179,6 +179,52 @@
   from { opacity: 0; transform: translateY(20px); }
 }
 
+/* Base styles for content */
+.banner-section .content-area {
+  padding: 1rem;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  .banner-section .content-area {
+    text-align: left !important;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+  }
+  .banner-section .content-area p {
+    font-size: 1rem;       /* slightly smaller than fs-30 */
+    line-height: 1.4;
+  }
+  .banner-section .content-area h2 {
+    font-size: 1.25rem;    /* slightly smaller h2 on mobile */
+  }
+  .banner-section .content-area a.btn {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Optional: ensure the background scales well on small devices */
+.banner-section .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Adjust slide height */
+.banner-section .swiper-slide {
+  min-height: 70vh;    /* taller on desktop */
+  display: flex;
+  align-items: center; /* vertically center content */
+}
+
+/* Mobile - reduce the height */
+@media (max-width: 767px) {
+  .banner-section .swiper-slide {
+    min-height: 50vh;  /* shorter height on mobile */
+  }
+}
+
+
     </style>
     
 </head>
@@ -461,7 +507,7 @@
   <div class="swiper-slide" style="background-image: url('./main/assets/images/banner2.jpg');">
     <div class="content-area text-center text-white">
       <p class="fs-30">Connecting Brilliant Minds to Shape Tomorrow</p>
-      <h2 class="animated-title fs-20 fw-bold text-start" data-title="Innovate. Inspire. Impact."></h2>
+      <h2 class="animated-title fs-20 fw-bold text-start" data-title="Innovate.Inspire.Impact."></h2>
       <a href="event-list.html" class="btn btn-lg btn-light mt-3">Discover Our Events →</a>
     </div>
   </div>
