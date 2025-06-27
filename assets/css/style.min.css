@@ -8,7 +8,12 @@
 @import"plugins/odometer-min.css";
 @import"plugins/animate.css";
 @import"../../../../../cdn.jsdelivr.net/npm/phosphor-icons%401.4.2/src/css/icons.min.css";
-@import"https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body, p, h1, h2, h3, h4, h5, h6, a, span, li, td, th, button, input, textarea, label {
+  font-family: 'Poppins', Helvetica, Arial, sans-serif !important;
+}
+
 
 :root {
     --body-font: "Raleway", sans-serif;
