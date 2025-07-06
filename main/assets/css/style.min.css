@@ -2692,16 +2692,12 @@ select {
 }
 
 .mouse-follower .cursor-outline {
-    height: 30px;
-    width: 30px;
-    border: 1px solid rgba(var(--p1), 1)
-}
+    background-color: #e62b1e !important; /* TEDx red color */
+    border: 2px solid #e62b1e !important;
+  }
 
 .mouse-follower .cursor-dot {
-    height: 6px;
-    width: 6px;
-    background: rgba(var(--p1), 1);
-    transition: var(--transition)
+    background-color: #e62b1e !important;
 }
 
 .mouse-follower.hide-cursor span {
@@ -2735,7 +2731,10 @@ select {
 .mouse-follower.highlight-cursor-para {
     cursor: none
 }
-
+.mouse-follower.highlight-cursor-head .cursor-dot,
+        .mouse-follower.highlight-cursor-para .cursor-dot {
+          background-color: rgba(230, 43, 30, 0.8) !important; /* Semi-transparent TEDx red */
+        }
 .mouse-follower.highlight-cursor-para .cursor-outline {
     height: 0;
     width: 0
