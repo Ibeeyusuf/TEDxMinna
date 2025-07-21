@@ -10875,8 +10875,7 @@ fieldset:disabled .btn {
 }
 
 .text-danger {
-    --bs-text-opacity: 1;
-    color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important
+    color: #e62b1e !important
 }
 
 .text-light {
@@ -10967,7 +10966,7 @@ fieldset:disabled .btn {
 
 .bg-danger {
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-danger-rgb), var(--bs-bg-opacity)) !important
+    background-color: #e62b1e !important
 }
 
 .bg-light {
