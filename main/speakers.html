@@ -1,24 +1,147 @@
 <!doctype html>
 <html lang="en">
 
-
-<!-- Mirrored from pixner.net/html/evendo/main/speakers.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Jun 2025 00:38:40 GMT -->
 <head>
     <!-- required meta -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- #keywords -->
-    <meta name="keywords" content="boot, Bootstrap, Evendo - Event & Conference Website">
+    <meta name="keywords" content="boot, Bootstrap, TEDx Minna - Event & Conference Website">
     <!-- #description -->
-    <meta name="description" content="Evendo - Event & Conference Website">
+    <meta name="description" content="TEDx Minna - Event & Conference Website">
     <!-- #title -->
-    <title>Evendo - Event & Conference Website</title>
+    <title>TEDx Minna - Speakers</title>
     <!-- #favicon -->
     <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
     <!-- ==== css dependencies start ==== -->
     <link rel="stylesheet" href="assets/css/style.min.css">
-
+    <style>
+        .unveiling-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .unveiling-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: relative;
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .unveiling-title {
+            font-size: 4rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #e62b1e, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        .unveiling-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .unveiling-message {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+        }
+        
+        .click-indicator {
+            font-size: 1rem;
+            opacity: 0.6;
+            animation: pulse 2s infinite;
+        }
+        
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="%23e62b1e" opacity="0.3"><animate attributeName="r" values="2;10;2" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.3;0.1;0.3" dur="3s" repeatCount="indefinite"/></circle></svg>') repeat;
+            animation: float 20s linear infinite;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #e62b1e; }
+            to { text-shadow: 0 0 30px #e62b1e, 0 0 40px #e62b1e; }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .revealed-content {
+            display: none;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .revealed-title {
+            font-size: 3rem;
+            color: #e62b1e;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .revealed-text {
+            font-size: 1.3rem;
+            color: white;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .unveiling-title {
+                font-size: 2.5rem;
+            }
+            .unveiling-subtitle {
+                font-size: 1.2rem;
+            }
+            .unveiling-message {
+                font-size: 1rem;
+            }
+            .revealed-title {
+                font-size: 2rem;
+            }
+            .revealed-text {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -75,1396 +198,68 @@
       
           <!-- Search + Tickets -->
           <div class="d-none d-lg-flex align-items-center gap-3">
-            <!-- Search Icon -->
-            
-      
             <!-- Tickets Button -->
             <a href="ticket.html" class="btn text-uppercase fw-bold rounded-pill px-4" style="background-color: #e62b1e;color: white;">Get Tickets</a>
           </div>
         </div>
-      </nav>
+    </nav>
     <!-- header-section end -->
 
-    <!-- banner section start-->
-    <section class="banner-section inner-banner position-relative pt-12 pt-md-12 pt-xl-20">
-        <div class="container position-relative cus-z1 py-20 py-md-20 py-xl-20">
-            <div class="row">
-                <div class="col-xxl-12 cus-z1 text-center">
-                    <div class="section-area">
-                        <h2 class="fs-two mb-3 mb-md-5">Speakers</h2>
-                    </div>
-                    <div class="breadcrumb-area">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb second position-relative m-0 d-center flex-wrap gap-2 gap-md-5">
-                                <li class="breadcrumb-item d-center fs-seven"><a href="../index.html" class="fw-normal">Home</a></li>
-                                <li class="breadcrumb-item d-center fs-seven"><a href="javascript:void(0)" class="fw-normal">Pages</a></li>
-                                <li class="breadcrumb-item d-center fs-seven p6-color active" aria-current="page"><span class="p6-color">Speakers</span></li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+    <!-- Main Content -->
+    <div class="unveiling-container" id="unveilingContainer">
+        <div class="background-animation"></div>
+        <div class="unveiling-content" id="initialContent">
+            <h1 class="unveiling-title">SPEAKERS</h1>
+            <h2 class="unveiling-subtitle">Something Amazing is Coming</h2>
+            <p class="unveiling-message">Our incredible lineup of speakers is being carefully curated to bring you the most inspiring and thought-provoking talks.</p>
+            <p class="click-indicator">Click anywhere to reveal more...</p>
         </div>
-    </section>
-    <!-- banner section end -->
+        
+        <div class="revealed-content" id="revealedContent">
+            <h2 class="revealed-title">SPEAKERS UNVEILING SOON</h2>
+            <p class="revealed-text">
+                We're working behind the scenes to bring you an extraordinary lineup of visionaries, innovators, and thought leaders who will share ideas worth spreading at TEDx Minna.
+                <br><br>
+                Stay tuned for the big reveal! Our speakers will be announced soon, and we promise they will inspire, challenge, and transform the way you think about the world.
+                <br><br>
+                Follow us on social media and check back regularly for updates on our amazing speaker lineup.
+            </p>
+        </div>
+    </div>
 
-    <!-- Team start -->
-    <section class="team-section s1-bg-color position-relative pt-120 pb-120">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-lg-6">
-                    <div class="section-area mb-8 mb-md-15 d-grid gap-3 gap-md-4 reveal-single reveal-text text-three">
-                        <span class="p6-color fw-semibold">TEAM</span>
-                        <h2 class="fs-two">Our Speakers</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row cus-row gy-7 gy-xl-8 justify-content-center justify-content-sm-start">
-                <div class="col-8 col-sm-6 col-lg-4">
-                    <div class="single-area d-grid gap-3 gap-xl-4 position-relative">
-                        <div class="image-area overflow-hidden d-center position-relative">
-                            <img src="assets/images/team-img-1.webp" class="w-100 pe-none" alt="image">
-                            <span class="box-style box-second second-alt tag-area m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
-                                <span class="d-center fs-four n1-color">
-                                    <i class="ph ph-microphone"></i>
-                                </span>
-                                <span class="fs-seven">Speaker</span>
-                            </span>
-                            <div class="hover-item d-center flex-column transition-sec cus-border border b-fifth position-absolute z-1">
-                                <ul class="d-center hover-active m-3 m-md-4 gap-1 gap-md-1 social-area transition">
-                                    <li>
-                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-twitter"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-instagram"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fa-brands fa-youtube"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 pe-none">
-                                    <span class="d-center fs-four n1-color">
-                                        <i class="ph ph-microphone"></i>
-                                    </span>
-                                    <span class="fs-seven">Speaker</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="text-area">
-                            <a href="speakers-single.html"><h5 class="mb-2 n2-color">Lila Thompson</h5></a>
-                            <span class="n3-color fw-bold fs-nine">Director of Sales</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-8 col-sm-6 col-lg-4">
-                    <div class="single-area d-grid gap-3 gap-xl-4 position-relative">
-                        <div class="image-area overflow-hidden d-center position-relative">
-                            <img src="assets/images/team-img-2.webp" class="w-100 pe-none" alt="image">
-                            <span class="box-style box-second second-alt tag-area m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
-                                <span class="d-center fs-four n1-color">
-                                    <i class="ph ph-microphone"></i>
-                                </span>
-                                <span class="fs-seven">Speaker</span>
-                            </span>
-                            <div class="hover-item d-center flex-column transition-sec cus-border border b-fifth position-absolute z-1">
-                                <ul class="d-center hover-active m-3 m-md-4 gap-1 gap-md-1 social-area transition">
-                                    <li>
-                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-twitter"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-instagram"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fa-brands fa-youtube"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 pe-none">
-                                    <span class="d-center fs-four n1-color">
-                                        <i class="ph ph-microphone"></i>
-                                    </span>
-                                    <span class="fs-seven">Speaker</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="text-area">
-                            <a href="speakers-single.html"><h5 class="mb-2 n2-color">John Smith</h5></a>
-                            <span class="n3-color fw-bold fs-nine">Chief Marketing Officer</span>
-                        </div>
-                    </div>
-                </div>                
-                <div class="col-8 col-sm-6 col-lg-4">
-                    <div class="single-area d-grid gap-3 gap-xl-4 position-relative">
-                        <div class="image-area overflow-hidden d-center position-relative">
-                            <img src="assets/images/team-img-3.webp" class="w-100 pe-none" alt="image">
-                            <span class="box-style box-second second-alt tag-area m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
-                                <span class="d-center fs-four n1-color">
-                                    <i class="ph ph-microphone"></i>
-                                </span>
-                                <span class="fs-seven">Speaker</span>
-                            </span>
-                            <div class="hover-item d-center flex-column transition-sec cus-border border b-fifth position-absolute z-1">
-                                <ul class="d-center hover-active m-3 m-md-4 gap-1 gap-md-1 social-area transition">
-                                    <li>
-                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-twitter"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-instagram"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fa-brands fa-youtube"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 pe-none">
-                                    <span class="d-center fs-four n1-color">
-                                        <i class="ph ph-microphone"></i>
-                                    </span>
-                                    <span class="fs-seven">Speaker</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="text-area">
-                            <a href="speakers-single.html"><h5 class="mb-2 n2-color">Emily Walker</h5></a>
-                            <span class="n3-color fw-bold fs-nine">Head of Product Design</span>
-                        </div>
-                    </div>
-                </div>                
-                <div class="col-8 col-sm-6 col-lg-4">
-                    <div class="single-area d-grid gap-3 gap-xl-4 position-relative">
-                        <div class="image-area overflow-hidden d-center position-relative">
-                            <img src="assets/images/team-img-4.webp" class="w-100 pe-none" alt="image">
-                            <span class="box-style box-second second-alt tag-area m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
-                                <span class="d-center fs-four n1-color">
-                                    <i class="ph ph-microphone"></i>
-                                </span>
-                                <span class="fs-seven">Speaker</span>
-                            </span>
-                            <div class="hover-item d-center flex-column transition-sec cus-border border b-fifth position-absolute z-1">
-                                <ul class="d-center hover-active m-3 m-md-4 gap-1 gap-md-1 social-area transition">
-                                    <li>
-                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-twitter"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-instagram"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fa-brands fa-youtube"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 pe-none">
-                                    <span class="d-center fs-four n1-color">
-                                        <i class="ph ph-microphone"></i>
-                                    </span>
-                                    <span class="fs-seven">Speaker</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="text-area">
-                            <a href="speakers-single.html"><h5 class="mb-2 n2-color">Michael Green</h5></a>
-                            <span class="n3-color fw-bold fs-nine">VP of Engineering</span>
-                        </div>
-                    </div>
-                </div>                
-                <div class="col-8 col-sm-6 col-lg-4">
-                    <div class="single-area d-grid gap-3 gap-xl-4 position-relative">
-                        <div class="image-area overflow-hidden d-center position-relative">
-                            <img src="assets/images/team-img-5.webp" class="w-100 pe-none" alt="image">
-                            <span class="box-style box-second second-alt tag-area m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
-                                <span class="d-center fs-four n1-color">
-                                    <i class="ph ph-microphone"></i>
-                                </span>
-                                <span class="fs-seven">Speaker</span>
-                            </span>
-                            <div class="hover-item d-center flex-column transition-sec cus-border border b-fifth position-absolute z-1">
-                                <ul class="d-center hover-active m-3 m-md-4 gap-1 gap-md-1 social-area transition">
-                                    <li>
-                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-twitter"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-instagram"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fa-brands fa-youtube"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 pe-none">
-                                    <span class="d-center fs-four n1-color">
-                                        <i class="ph ph-microphone"></i>
-                                    </span>
-                                    <span class="fs-seven">Speaker</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="text-area">
-                            <a href="speakers-single.html"><h5 class="mb-2 n2-color">Sophia Miller</h5></a>
-                            <span class="n3-color fw-bold fs-nine">Chief Financial Officer</span>
-                        </div>
-                    </div>
-                </div>                
-                <div class="col-8 col-sm-6 col-lg-4">
-                    <div class="single-area d-grid gap-3 gap-xl-4 position-relative">
-                        <div class="image-area overflow-hidden d-center position-relative">
-                            <img src="assets/images/team-img-6.webp" class="w-100 pe-none" alt="image">
-                            <span class="box-style box-second second-alt tag-area m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
-                                <span class="d-center fs-four n1-color">
-                                    <i class="ph ph-microphone"></i>
-                                </span>
-                                <span class="fs-seven">Speaker</span>
-                            </span>
-                            <div class="hover-item d-center flex-column transition-sec cus-border border b-fifth position-absolute z-1">
-                                <ul class="d-center hover-active m-3 m-md-4 gap-1 gap-md-1 social-area transition">
-                                    <li>
-                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-twitter"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-instagram"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fa-brands fa-youtube"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 pe-none">
-                                    <span class="d-center fs-four n1-color">
-                                        <i class="ph ph-microphone"></i>
-                                    </span>
-                                    <span class="fs-seven">Speaker</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="text-area">
-                            <a href="speakers-single.html"><h5 class="mb-2 n2-color">David Brown</h5></a>
-                            <span class="n3-color fw-bold fs-nine">Head of Operations</span>
-                        </div>
-                    </div>
-                </div>                
-                <div class="col-8 col-sm-6 col-lg-4">
-                    <div class="single-area d-grid gap-3 gap-xl-4 position-relative">
-                        <div class="image-area overflow-hidden d-center position-relative">
-                            <img src="assets/images/team-img-7.webp" class="w-100 pe-none" alt="image">
-                            <span class="box-style box-second second-alt tag-area m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
-                                <span class="d-center fs-four n1-color">
-                                    <i class="ph ph-microphone"></i>
-                                </span>
-                                <span class="fs-seven">Speaker</span>
-                            </span>
-                            <div class="hover-item d-center flex-column transition-sec cus-border border b-fifth position-absolute z-1">
-                                <ul class="d-center hover-active m-3 m-md-4 gap-1 gap-md-1 social-area transition">
-                                    <li>
-                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-twitter"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-instagram"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fa-brands fa-youtube"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 pe-none">
-                                    <span class="d-center fs-four n1-color">
-                                        <i class="ph ph-microphone"></i>
-                                    </span>
-                                    <span class="fs-seven">Speaker</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="text-area">
-                            <a href="speakers-single.html"><h5 class="mb-2 n2-color">Olivia Johnson</h5></a>
-                            <span class="n3-color fw-bold fs-nine">VP of Marketing</span>
-                        </div>
-                    </div>
-                </div>                
-                <div class="col-8 col-sm-6 col-lg-4">
-                    <div class="single-area d-grid gap-3 gap-xl-4 position-relative">
-                        <div class="image-area overflow-hidden d-center position-relative">
-                            <img src="assets/images/team-img-8.webp" class="w-100 pe-none" alt="image">
-                            <span class="box-style box-second second-alt tag-area m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
-                                <span class="d-center fs-four n1-color">
-                                    <i class="ph ph-microphone"></i>
-                                </span>
-                                <span class="fs-seven">Speaker</span>
-                            </span>
-                            <div class="hover-item d-center flex-column transition-sec cus-border border b-fifth position-absolute z-1">
-                                <ul class="d-center hover-active m-3 m-md-4 gap-1 gap-md-1 social-area transition">
-                                    <li>
-                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-twitter"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-instagram"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fa-brands fa-youtube"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 pe-none">
-                                    <span class="d-center fs-four n1-color">
-                                        <i class="ph ph-microphone"></i>
-                                    </span>
-                                    <span class="fs-seven">Speaker</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="text-area">
-                            <a href="speakers-single.html"><h5 class="mb-2 n2-color">Ethan Lewis</h5></a>
-                            <span class="n3-color fw-bold fs-nine">Chief Technology Officer</span>
-                        </div>
-                    </div>
-                </div>                
-                <div class="col-8 col-sm-6 col-lg-4">
-                    <div class="single-area d-grid gap-3 gap-xl-4 position-relative">
-                        <div class="image-area overflow-hidden d-center position-relative">
-                            <img src="assets/images/team-img-9.webp" class="w-100 pe-none" alt="image">
-                            <span class="box-style box-second second-alt tag-area m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 position-absolute bottom-0 end-0">
-                                <span class="d-center fs-four n1-color">
-                                    <i class="ph ph-microphone"></i>
-                                </span>
-                                <span class="fs-seven">Speaker</span>
-                            </span>
-                            <div class="hover-item d-center flex-column transition-sec cus-border border b-fifth position-absolute z-1">
-                                <ul class="d-center hover-active m-3 m-md-4 gap-1 gap-md-1 social-area transition">
-                                    <li>
-                                        <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-facebook-f"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/" aria-label="Twitter" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-twitter"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fab fa-instagram"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/" aria-label="youtube" class="d-center rounded-circle single-item n1-bg-color transition">
-                                            <span class="d-center fs-seven p6-color transition">
-                                                <i class="fa-brands fa-youtube"></i>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <span class="box-style box-second second-alt m-4 m-md-6 transition rounded-pill n1-bg-color d-center gap-2 py-1 py-md-2 px-3 px-md-4 pe-none">
-                                    <span class="d-center fs-four n1-color">
-                                        <i class="ph ph-microphone"></i>
-                                    </span>
-                                    <span class="fs-seven">Speaker</span>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="text-area">
-                            <a href="speakers-single.html"><h5 class="mb-2 n2-color">Ava Scott</h5></a>
-                            <span class="n3-color fw-bold fs-nine">Chief Executive Officer</span>
-                        </div>
-                    </div>
-                </div>    
-            </div>
-        </div>
-    </section>
-    <!-- Team end -->
+    <!-- JavaScript for click interaction -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.getElementById('unveilingContainer');
+            const initialContent = document.getElementById('initialContent');
+            const revealedContent = document.getElementById('revealedContent');
+            let isRevealed = false;
 
-    <!-- Schedule Section start -->
-    <section class="schedule-section position-relative n1-bg-color pt-120 pb-120">
-        <div class="abs-area pe-none">
-            <div class="item item-2 position-absolute shape-animation-2 d-none d-lg-block end-0 bottom-0 mb-10">
-                <img src="assets/images/shape/schedule-shape-14.webp" alt="icon">
-            </div>
-        </div>
-        <div class="container">
-            <div class="row gy-6 gy-md-0 mb-8 mb-md-15 justify-content-center text-center">
-                <div class="col-md-8 col-lg-8 col-xl-7">
-                    <div class="section-area d-grid gap-3 gap-md-4 reveal-single reveal-text text-one">
-                        <span class="p6-color fw-semibold">SCHEDULE</span>
-                        <h2 class="fs-two">Unlock the Day's Schedule</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row gy-6 singleTab third">
-                <div class="col-lg-3 col-xl-2">
-                    <ul class="tabLinks d-center justify-content-start flex-wrap gap-1">
-                        <li class="nav-links transition active">
-                            <button class="tablink pb-1 d-grid gap-1 px-2 px-md-5 py-3 py-md-4 text-start">
-                                <span class="fs-eight fw-semibold n2-color">01: SATURDAY</span>
-                                <span class="fs-eight n3-color">January 06, 2026</span>
-                            </button>
-                        </li>
-                        <li class="nav-links transition">
-                            <button class="tablink pb-1 d-grid gap-1 px-2 px-md-5 py-3 py-md-4 text-start">
-                                <span class="fs-eight fw-semibold n2-color">02: SUNDAY</span>
-                                <span class="fs-eight n3-color">January 07, 2026</span>
-                            </button>
-                        </li>
-                        <li class="nav-links transition">
-                            <button class="tablink pb-1 d-grid gap-1 px-2 px-md-5 py-3 py-md-4 text-start">
-                                <span class="fs-eight fw-semibold n2-color">03: MONDAY</span>
-                                <span class="fs-eight n3-color">January 11, 2026</span>
-                            </button>
-                        </li>
-                        <li class="nav-links transition">
-                            <button class="tablink pb-1 d-grid gap-1 px-2 px-md-5 py-3 py-md-4 text-start">
-                                <span class="fs-eight fw-semibold n2-color">04: TUESDAY</span>
-                                <span class="fs-eight n3-color">January 12, 2026</span>
-                            </button>
-                        </li>
-                        <li class="nav-links transition">
-                            <button class="tablink pb-1 d-grid gap-1 px-2 px-md-5 py-3 py-md-4 text-start">
-                                <span class="fs-eight fw-semibold n2-color">05: WEDNESDAY</span>
-                                <span class="fs-eight n3-color">January 13, 2026</span>
-                            </button>
-                        </li>
-                        <li class="nav-links transition">
-                            <button class="tablink pb-1 d-grid gap-1 px-2 px-md-5 py-3 py-md-4 text-start">
-                                <span class="fs-eight fw-semibold n2-color">06: THURSDAY</span>
-                                <span class="fs-eight n3-color">January 14, 2026</span>
-                            </button>
-                        </li>
-                        <li class="nav-links transition">
-                            <button class="tablink pb-1 d-grid gap-1 px-2 px-md-5 py-3 py-md-4 text-start">
-                                <span class="fs-eight fw-semibold n2-color">07: FRIDAY</span>
-                                <span class="fs-eight n3-color">January 15, 2026</span>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-9 col-xl-10">
-                    <div class="tabContents">
-                        <div class="tabItem d-grid gap-6 gap-md-6 active">
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">2:30 PM - 3:00 PM</span>
-                                        <p class="n3-color">Room 150</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">AI Ethics: Navigating the Challenges</span>
-                                    <p class="n3-color">A discussion on the ethical considerations surrounding artificial intelligence.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join the Discussion</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">3:45 PM - 4:15 PM</span>
-                                        <p class="n3-color">Conference Hall B</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Startup Showcase</span>
-                                    <p class="n3-color">A spotlight on innovative startups in the tech industry.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Explore Startups</span>
-                                    </a>
-                                </div>
-                            </div>                            
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">4:30 PM - 5:00 PM</span>
-                                        <p class="n3-color">Room 102</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Leadership in Tech</span>
-                                    <p class="n3-color">Insights from leaders in the tech industry.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join Talk</span>
-                                    </a>
-                                </div>
-                            </div>                            
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">5:15 PM - 6:00 PM</span>
-                                        <p class="n3-color">Room 303</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Fireside Chat: The Future of AI</span>
-                                    <p class="n3-color">An intimate conversation on the future of artificial intelligence.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">RSVP for Chat</span>
-                                    </a>
-                                </div>
-                            </div>                            
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">6:00 PM - 6:30 PM</span>
-                                        <p class="n3-color">Hall 1</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Closing Remarks</span>
-                                    <p class="n3-color">A wrap-up of the day’s events and what's coming next.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Attend Closing</span>
-                                    </a>
-                                </div>
-                            </div>                            
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">7:00 PM - 8:00 PM</span>
-                                        <p class="n3-color">Networking Area</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Evening Mixer</span>
-                                    <p class="n3-color">A relaxed networking session with drinks and appetizers.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join Mixer</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tabItem d-grid gap-6 gap-md-6">
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">1:30 PM - 2:00 PM</span>
-                                        <p class="n3-color">Room 510</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Digital Transformation in Retail</span>
-                                    <p class="n3-color">How digital tools are reshaping the retail industry.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">RSVP Here</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">9:00 PM - 10:00 PM</span>
-                                        <p class="n3-color">Main Auditorium</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Award Ceremony</span>
-                                    <p class="n3-color">Celebrating the most innovative companies and individuals.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Attend Ceremony</span>
-                                    </a>
-                                </div>
-                            </div>                            
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">10:00 PM - 12:00 AM</span>
-                                        <p class="n3-color">VIP Lounge</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">VIP After Party</span>
-                                    <p class="n3-color">An exclusive after-party for VIP attendees with cocktails and music.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join After Party</span>
-                                    </a>
-                                </div>
-                            </div>                            
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">12:00 AM - 1:00 AM</span>
-                                        <p class="n3-color">Terrace Bar</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Late Night Karaoke</span>
-                                    <p class="n3-color">Wind down the night with some fun karaoke.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Sing Karaoke</span>
-                                    </a>
-                                </div>
-                            </div>                            
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">10:00 AM - 10:30 AM</span>
-                                        <p class="n3-color">Conference Hall B</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Ice Breaking Session</span>
-                                    <p class="n3-color">Get to know your fellow attendees and expand your network.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Buy Tickets</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">11:00 AM - 11:30 AM</span>
-                                        <p class="n3-color">Room 101</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Keynote Speech</span>
-                                    <p class="n3-color">Inspiring words from the industry leader.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Register Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tabItem d-grid gap-6 gap-md-6">
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">12:30 PM - 1:00 PM</span>
-                                        <p class="n3-color">Room 412</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Cloud Computing in 2024</span>
-                                    <p class="n3-color">Exploring the latest developments in cloud computing and infrastructure.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join the Talk</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">12:00 PM - 12:45 PM</span>
-                                        <p class="n3-color">Room 202</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Panel Discussion</span>
-                                    <p class="n3-color">Experts discuss the latest trends in technology.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join Webinar</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">1:30 PM - 2:00 PM</span>
-                                        <p class="n3-color">Hall C</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Networking Lunch</span>
-                                    <p class="n3-color">Enjoy lunch while networking with peers.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">RSVP Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">9:00 AM - 9:30 AM</span>
-                                        <p class="n3-color">Conference Hall A</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Opening Ceremony</span>
-                                    <p class="n3-color">Welcome to the event and opening remarks.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Get Started</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">9:45 AM - 10:15 AM</span>
-                                        <p class="n3-color">Room 303</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Product Demo</span>
-                                    <p class="n3-color">See the latest tech innovations in action.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Book Demo</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">10:30 AM - 11:00 AM</span>
-                                        <p class="n3-color">Conference Hall C</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Workshop: Digital Marketing</span>
-                                    <p class="n3-color">Learn the latest strategies for digital marketing success.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join Workshop</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tabItem d-grid gap-6 gap-md-6">
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">11:30 AM - 12:00 PM</span>
-                                        <p class="n3-color">Room 307</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Tech Startups: Innovation & Growth</span>
-                                    <p class="n3-color">A look at how startups are driving innovation in tech and business.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Learn More</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">11:30 AM - 12:00 PM</span>
-                                        <p class="n3-color">Room 201</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Break: Coffee & Networking</span>
-                                    <p class="n3-color">Take a break and network with fellow attendees.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Grab Coffee</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">12:00 PM - 12:45 PM</span>
-                                        <p class="n3-color">Room 202</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Panel Discussion</span>
-                                    <p class="n3-color">Experts discuss the latest trends in technology.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join Webinar</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">1:30 PM - 2:00 PM</span>
-                                        <p class="n3-color">Hall C</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Networking Lunch</span>
-                                    <p class="n3-color">Enjoy lunch while networking with peers.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">RSVP Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">2:00 PM - 2:30 PM</span>
-                                        <p class="n3-color">Conference Room A</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Breakout Session: Leadership</span>
-                                    <p class="n3-color">Enhancing leadership skills in a digital world.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">3:00 PM - 3:45 PM</span>
-                                        <p class="n3-color">Room 501</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Cybersecurity: Protecting Data</span>
-                                    <p class="n3-color">A session on the latest strategies for data security.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Secure Your Spot</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tabItem d-grid gap-6 gap-md-6">
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">4:00 PM - 4:30 PM</span>
-                                        <p class="n3-color">Room 102</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Panel Discussion: The Future of AI</span>
-                                    <p class="n3-color">Industry experts discuss the potential impact of AI in various sectors.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">RSVP</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">4:45 PM - 5:15 PM</span>
-                                        <p class="n3-color">Room 305</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Sustainability in Tech</span>
-                                    <p class="n3-color">Exploring how technology can be used to promote environmental sustainability.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join the Session</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">5:30 PM - 6:00 PM</span>
-                                        <p class="n3-color">Main Auditorium</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Closing Keynote: Innovating for the Future</span>
-                                    <p class="n3-color">A visionary talk about the future of innovation across industries.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Attend Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">6:00 PM - 7:00 PM</span>
-                                        <p class="n3-color">Outdoor Patio</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Networking Reception</span>
-                                    <p class="n3-color">Join us for drinks and light refreshments while networking with fellow attendees.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">RSVP Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">7:00 PM - 9:00 PM</span>
-                                        <p class="n3-color">Ballroom</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Gala Dinner</span>
-                                    <p class="n3-color">Enjoy an evening of gourmet dining, entertainment, and networking.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Reserve Your Seat</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tabItem d-grid gap-6 gap-md-6">
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">4:00 PM - 4:30 PM</span>
-                                        <p class="n3-color">Room 102</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Panel Discussion: The Future of AI</span>
-                                    <p class="n3-color">Industry experts discuss the potential impact of AI in various sectors.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">RSVP</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">4:45 PM - 5:15 PM</span>
-                                        <p class="n3-color">Room 305</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Sustainability in Tech</span>
-                                    <p class="n3-color">Exploring how technology can be used to promote environmental sustainability.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join the Session</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">5:30 PM - 6:00 PM</span>
-                                        <p class="n3-color">Main Auditorium</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Closing Keynote: Innovating for the Future</span>
-                                    <p class="n3-color">A visionary talk about the future of innovation across industries.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Attend Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">6:00 PM - 7:00 PM</span>
-                                        <p class="n3-color">Outdoor Patio</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Networking Reception</span>
-                                    <p class="n3-color">Join us for drinks and light refreshments while networking with fellow attendees.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">RSVP Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">7:00 PM - 9:00 PM</span>
-                                        <p class="n3-color">Ballroom</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Gala Dinner</span>
-                                    <p class="n3-color">Enjoy an evening of gourmet dining, entertainment, and networking.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Reserve Your Seat</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tabItem d-grid gap-6 gap-md-6">
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">9:45 AM - 10:30 AM</span>
-                                        <p class="n3-color">Room 202</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Cybersecurity Trends</span>
-                                    <p class="n3-color">A session on emerging trends in cybersecurity and how to stay ahead.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join Session</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">10:45 AM - 11:15 AM</span>
-                                        <p class="n3-color">Room 310</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">The Future of Work</span>
-                                    <p class="n3-color">How AI and automation are reshaping the workplace.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">RSVP Now</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">11:30 AM - 12:00 PM</span>
-                                        <p class="n3-color">Room 307</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Tech Startups: Innovation & Growth</span>
-                                    <p class="n3-color">A look at how startups are driving innovation in tech and business.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Learn More</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">12:30 PM - 1:00 PM</span>
-                                        <p class="n3-color">Room 412</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Cloud Computing in 2024</span>
-                                    <p class="n3-color">Exploring the latest developments in cloud computing and infrastructure.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join the Talk</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">1:30 PM - 2:00 PM</span>
-                                        <p class="n3-color">Room 510</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">Digital Transformation in Retail</span>
-                                    <p class="n3-color">How digital tools are reshaping the retail industry.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">RSVP Here</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="row gy-4 gy-md-0 single-item align-items-center n1-bg-color py-2 py-md-3 px-4 px-md-6">
-                                <div class="col-md-3 col-lg-3 col-xl-4">
-                                    <div class="time-area d-flex flex-column gap-1 align-items-start h-100">
-                                        <span class="n2-color fw-bold fs-eight">2:30 PM - 3:00 PM</span>
-                                        <p class="n3-color">Room 150</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-xl-5 mid-area d-grid gap-1">
-                                    <span class="n2-color fw-bold fs-eight">AI Ethics: Navigating the Challenges</span>
-                                    <p class="n3-color">A discussion on the ethical considerations surrounding artificial intelligence.</p>
-                                </div>
-                                <div class="col-md-3 col-xl-3 btn-area d-center justify-content-start justify-content-md-end">
-                                    <a href="event-single.html" class="box-style box-second first-alt alt-three transition d-center py-2 py-md-3 px-4 px-md-6">
-                                        <span class="fs-eight fw-semibold">Join the Discussion</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Schedule Section end -->
+            container.addEventListener('click', function() {
+                if (!isRevealed) {
+                    initialContent.style.display = 'none';
+                    revealedContent.style.display = 'block';
+                    isRevealed = true;
+                }
+            });
 
-    <!-- Footer Area Start -->
-    <footer class="bg-black text-white py-5">
-        <div class="container">
-      
-          <!-- Search & Socials -->
-          <div class="row align-items-center mb-4">
-            
-            <div class="col-12 col-md-6 text-md-end">
-              <a href="#" class="text-white me-3 fs-4"><i class="bi bi-envelope"></i></a>
-              <a href="#" class="text-white me-3 fs-4"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="text-white me-3 fs-4"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-      
-          <!-- Links -->
-          <div class="row gy-3 mb-4">
-            <div class="col-6 col-md-3">
-              <h6 class="fw-bold">About</h6>
-              <ul class="list-unstyled mb-0">
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Our Mission</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Team</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Contact</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md-3">
-              <h6 class="fw-bold">Get Involved</h6>
-              <ul class="list-unstyled mb-0">
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Become a Speaker</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Partner With Us</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Volunteer</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md-3">
-              <h6 class="fw-bold">Events</h6>
-              <ul class="list-unstyled mb-0">
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Upcoming Events</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Past Talks</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Podcast</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md-3">
-              <h6 class="fw-bold">More</h6>
-              <ul class="list-unstyled mb-0">
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">TED.com</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Privacy Policy</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Terms & Conditions</a></li>
-              </ul>
-            </div>
-          </div>
-      
-          <!-- Description -->
-          <div class="row">
-            <div class="col-12">
-              <p class="small opacity-75 mb-0">
-                <strong>About TEDxMinna:</strong> TEDxMinna is a locally organized, nonprofit event celebrating ideas worth spreading. We bring together inspiring speakers, artists, and changemakers to create conversations that ignite innovation and community action across Niger State.
-              </p>
-            </div>
-          </div>
-      
-          <!-- Bottom -->
-          <div class="row mt-4 border-top border-secondary pt-3">
-            <div class="col text-center">
-              <small>&copy; <span id="year"></span> TEDxMinna. Organized under license from TED.</small>
-            </div>
-          </div>
-      
-        </div>
-      </footer>
-    <!-- Footer Area End -->
-    
-    <!-- ==== js dependencies start ==== -->
-    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/plugins/plugins.js"></script>
-    <script src="assets/js/plugins/plugin-custom.js"></script>
+            // Add some interactive particles on mouse move
+            container.addEventListener('mousemove', function(e) {
+                if (!isRevealed) {
+                    const rect = container.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+                    
+                    container.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(230, 43, 30, 0.1) 0%, rgba(0, 0, 0, 1) 50%)`;
+                }
+            });
+        });
+    </script>
+
+    <!-- Include necessary scripts -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 
 </body>
-
-
-<!-- Mirrored from pixner.net/html/evendo/main/speakers.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Jun 2025 00:38:41 GMT -->
 </html>

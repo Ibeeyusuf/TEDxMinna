@@ -13,11 +13,205 @@
     <!-- #description -->
     <meta name="description" content="TEDxMinna">
     <!-- #title -->
-    <title>TEDxMinna</title>
+    <title>TEDx Minna - Contact Us</title>
     <!-- #favicon -->
     <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
     <!-- ==== css dependencies start ==== -->
     <link rel="stylesheet" href="assets/css/style.min.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #333333;
+        }
+        
+        .banner-section {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .banner-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%23e62b1e" opacity="0.2"/><circle cx="80" cy="40" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="40" cy="80" r="1" fill="%23e62b1e" opacity="0.2"/></svg>') repeat;
+            animation: float 20s linear infinite;
+        }
+        
+        .contact-section {
+            background-color: #ffffff !important;
+            position: relative;
+        }
+        
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(230, 43, 30, 0.03) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(0, 0, 0, 0.02) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .form-area {
+            background: #ffffff !important;
+            border: 2px solid #f0f0f0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .form-area:hover {
+            border-color: rgba(230, 43, 30, 0.3);
+            box-shadow: 0 15px 40px rgba(230, 43, 30, 0.1);
+        }
+        
+        .input-area {
+            background-color: #f8f9fa !important;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        
+        .input-area:focus-within {
+            border-color: #e62b1e;
+            background-color: #ffffff !important;
+            box-shadow: 0 0 10px rgba(230, 43, 30, 0.2);
+        }
+        
+        .input-area input,
+        .input-area textarea {
+            background: transparent !important;
+            color: #333333 !important;
+            border: none;
+        }
+        
+        .input-area input::placeholder,
+        .input-area textarea::placeholder {
+            color: #888888;
+        }
+        
+        .box-style.box-second.first-alt {
+            background: linear-gradient(45deg, #e62b1e, #ff4444);
+            border: none;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+        
+        .box-style.box-second.first-alt:hover {
+            background: linear-gradient(45deg, #ff4444, #e62b1e);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230, 43, 30, 0.4);
+        }
+        
+        .social-area a {
+            background: #ffffff !important;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+        
+        .social-area a:hover {
+            background: #e62b1e !important;
+            border-color: #e62b1e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(230, 43, 30, 0.3);
+        }
+        
+        .social-area a:hover .p6-color {
+            color: #ffffff !important;
+        }
+        
+        .p6-color {
+            color: #e62b1e !important;
+        }
+        
+        .n2-color {
+            color: #333333 !important;
+        }
+        
+        .n3-color {
+            color: #666666 !important;
+        }
+        
+        .fs-two {
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(230, 43, 30, 0.3);
+        }
+        
+        .breadcrumb a {
+            color: #cccccc;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            color: #e62b1e;
+        }
+        
+        .contact-info-card {
+            background: #ffffff;
+            border: 2px solid #f0f0f0;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-info-card:hover {
+            border-color: rgba(230, 43, 30, 0.3);
+            box-shadow: 0 10px 30px rgba(230, 43, 30, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #e62b1e, #ff4444);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(230, 43, 30, 0.3);
+        }
+        
+        .section-text h2 {
+            color: #333333 !important;
+            text-shadow: none;
+        }
+        
+        .section-text p {
+            color: #666666 !important;
+        }
+        
+        .section-text .p6-color {
+            color: #e62b1e !important;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info-card {
+                padding: 1.5rem;
+            }
+            
+            .contact-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
 
 </head>
 
@@ -86,9 +280,9 @@
     <!-- header-section end -->
 
     <!-- banner section start-->
-    <section class="banner-section inner-banner position-relative pt-12 pt-md-12 pt-xl-20">
-        <div class="container position-relative cus-z1 py-20 py-md-20 py-xl-20">
-            <div class="row">
+    <section class="banner-section inner-banner position-relative">
+        <div class="container position-relative">
+            <!-- <div class="row">
                 <div class="col-xxl-12 cus-z1 text-center">
                     <div class="section-area">
                         <h2 class="fs-two mb-3 mb-md-5">Contact Us</h2>
@@ -103,7 +297,7 @@
                         </nav>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!-- banner section end -->
@@ -116,59 +310,74 @@
                     <div class="d-grid gap-5 gap-md-8 reveal-single reveal-text text-one">
                         <div class="section-text d-grid gap-3 gap-md-4">
                             <span class="p6-color fw-semibold">CONTACT</span>
-                            <h2 class="fs-two">Have a project? Get in touch with us!</h2>
-                            <p class="fs-eight n3-color">Get in touch with us for inquiries, support, or collaboration opportunities. We're here to help!</p>
+                            <h2 class="fs-two">Let's Connect and Spread Ideas Worth Sharing!</h2>
+                            <p class="fs-eight n3-color">Ready to be part of something extraordinary? Get in touch with TEDx Minna for speaking opportunities, partnerships, sponsorships, or general inquiries. We're here to help bring your ideas to life!</p>
                         </div>
+                        <!-- Contact Info Cards -->
+                        <div class="contact-info-card">
+                            <div class="contact-icon">
+                                <i class="ph ph-envelope-open"></i>
+                            </div>
+                            <h5 class="n2-color mb-2">Email Us</h5>
+                            <p class="n3-color mb-2">info@tedxminna.com</p>
+                            <p class="n3-color">speakers@tedxminna.com</p>
+                        </div>
+                        
+                        <div class="contact-info-card">
+                            <div class="contact-icon">
+                                <i class="ph ph-map-pin"></i>
+                            </div>
+                            <h5 class="n2-color mb-2">Location</h5>
+                            <p class="n3-color">Minna, Niger State, Nigeria</p>
+                            <p class="n3-color">Event venue details will be announced</p>
+                        </div>
+                        
+                        <div class="contact-info-card">
+                            <div class="contact-icon">
+                                <i class="ph ph-phone"></i>
+                            </div>
+                            <h5 class="n2-color mb-2">Call Us</h5>
+                            <p class="n3-color">+234 (0) 123 456 7890</p>
+                            <p class="n3-color">Available Mon-Fri, 9AM-5PM</p>
+                        </div>
+                        
                         <ul class="d-center justify-content-start gap-2 gap-md-3 social-area">
                             <li>
-                                <a href="https://www.facebook.com/" aria-label="Facebook" class="d-center n1-bg-color rounded-circle transition">
+                                <a href="https://www.facebook.com/tedxminna" aria-label="Facebook" class="d-center n1-bg-color rounded-circle transition">
                                     <span class="d-center fs-seven p6-color">
                                         <i class="fab fa-facebook-f"></i>
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/" aria-label="Twitter" class="d-center n1-bg-color rounded-circle transition">
+                                <a href="https://twitter.com/tedxminna" aria-label="Twitter" class="d-center n1-bg-color rounded-circle transition">
                                     <span class="d-center fs-seven p6-color">
                                         <i class="fab fa-twitter"></i>
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/" aria-label="Instagram" class="d-center n1-bg-color rounded-circle transition">
+                                <a href="https://www.instagram.com/tedxminna" aria-label="Instagram" class="d-center n1-bg-color rounded-circle transition">
                                     <span class="d-center fs-seven p6-color">
                                         <i class="fab fa-instagram"></i>
                                     </span>
                                 </a>
                             </li>
                             <li>
-                                <a href="https://www.dribbble.com/" aria-label="dribbble" class="d-center n1-bg-color rounded-circle transition">
+                                <a href="https://www.linkedin.com/company/tedxminna" aria-label="LinkedIn" class="d-center n1-bg-color rounded-circle transition">
                                     <span class="d-center fs-seven p6-color">
-                                        <i class="fa-brands fa-dribbble"></i>
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/tedxminna" aria-label="YouTube" class="d-center n1-bg-color rounded-circle transition">
+                                    <span class="d-center fs-seven p6-color">
+                                        <i class="fab fa-youtube"></i>
                                     </span>
                                 </a>
                             </li>
                         </ul>
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-6 col-xxl-5 d-flex flex-column gap-3 gap-md-4">
-                                <div class="d-flex align-items-center gap-3">
-                                    <span class="d-center p6-color fs-five">
-                                        <i class="ph ph-envelope-open"></i>
-                                    </span>
-                                    <span class="n2-color">Address</span>
-                                </div>
-                                <p class="n3-color">1090 Richmond Avenue, Houston, Texas 7704, USA</p>
-                            </div>
-                            <div class="col-6 col-xxl-5 d-flex flex-column gap-3 gap-md-4">
-                                <div class="d-flex align-items-center gap-3">
-                                    <span class="d-center p6-color fs-five">
-                                        <i class="ph ph-clock"></i>
-                                    </span>
-                                    <span class="n2-color">Visit us</span>
-                                </div>
-                                <p class="n3-color">Monday -> Saturday 9AM to 10PM</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 d-grid gap-4 gap-md-6">
@@ -250,75 +459,63 @@
     <!-- Contact Section end -->    
 
     <!-- Footer Area Start -->
-    <footer class="bg-black text-white py-5">
+    <footer class="footer-section bg-black text-white pt-5 pb-3">
         <div class="container">
-      
-          <!-- Search & Socials -->
-          <div class="row align-items-center mb-4">
-            
-            <div class="col-12 col-md-6 text-md-end">
-              <a href="#" class="text-white me-3 fs-4"><i class="bi bi-envelope"></i></a>
-              <a href="#" class="text-white me-3 fs-4"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="text-white me-3 fs-4"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="text-white me-3 fs-4"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-widget">
+                        <img src="assets/images/logo.png" alt="TEDx Minna" style="height: 80px;" class="mb-3">
+                        <p class="text-white-50">
+                            TEDxMinna is a local platform for ideas worth spreading, bringing together thought leaders, innovators, and changemakers.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="footer-widget">
+                        <h5 class="text-white fw-bold mb-3">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="../index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                            <li><a href="about-us.html" class="text-white-50 text-decoration-none">About</a></li>
+                            <li><a href="speakers.html" class="text-white-50 text-decoration-none">Speakers</a></li>
+                            <li><a href="event-list.html" class="text-white-50 text-decoration-none">Events</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-widget">
+                        <h5 class="text-white fw-bold mb-3">Contact Info</h5>
+                        <p class="text-white-50 mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            Minna, Niger State, Nigeria
+                        </p>
+                        <p class="text-white-50 mb-2">
+                            <i class="fas fa-envelope me-2"></i>
+                            info@tedxminna.com
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-widget">
+                        <h5 class="text-white fw-bold mb-3">Follow Us</h5>
+                        <div class="social-links">
+                            <a href="#" class="text-white-50 me-3"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="text-white-50 me-3"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="text-white-50 me-3"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="text-white-50 me-3"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-      
-          <!-- Links -->
-          <div class="row gy-3 mb-4">
-            <div class="col-6 col-md-3">
-              <h6 class="fw-bold">About</h6>
-              <ul class="list-unstyled mb-0">
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Our Mission</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Team</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Contact</a></li>
-              </ul>
+            <hr class="border-white-50">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="text-white-50 mb-0">
+                        &copy; 2025 TEDxMinna. All rights reserved. | This independent TEDx event is operated under license from TED.
+                    </p>
+                </div>
             </div>
-            <div class="col-6 col-md-3">
-              <h6 class="fw-bold">Get Involved</h6>
-              <ul class="list-unstyled mb-0">
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Become a Speaker</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Partner With Us</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Volunteer</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md-3">
-              <h6 class="fw-bold">Events</h6>
-              <ul class="list-unstyled mb-0">
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Upcoming Events</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Past Talks</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Podcast</a></li>
-              </ul>
-            </div>
-            <div class="col-6 col-md-3">
-              <h6 class="fw-bold">More</h6>
-              <ul class="list-unstyled mb-0">
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">TED.com</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Privacy Policy</a></li>
-                <li><a href="#" class="text-white opacity-75 text-decoration-none">Terms & Conditions</a></li>
-              </ul>
-            </div>
-          </div>
-      
-          <!-- Description -->
-          <div class="row">
-            <div class="col-12">
-              <p class="small opacity-75 mb-0">
-                <strong>About TEDxMinna:</strong> TEDxMinna is a locally organized, nonprofit event celebrating ideas worth spreading. We bring together inspiring speakers, artists, and changemakers to create conversations that ignite innovation and community action across Niger State.
-              </p>
-            </div>
-          </div>
-      
-          <!-- Bottom -->
-          <div class="row mt-4 border-top border-secondary pt-3">
-            <div class="col text-center">
-              <small>&copy; <span id="year"></span> TEDxMinna. Organized under license from TED.</small>
-            </div>
-          </div>
-      
         </div>
-      </footer>
+    </footer>
     <!-- Footer Area End -->
     
     <!-- ==== js dependencies start ==== -->
