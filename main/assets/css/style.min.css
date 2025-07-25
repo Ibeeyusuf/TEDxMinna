@@ -658,7 +658,7 @@ select {
 }
 
 .p7-bg-color {
-    background-color: rgba(var(--p7), 1)
+    background-color: #dc3545
 }
 
 .p8-bg-color {
@@ -2717,7 +2717,7 @@ select {
 .mouse-follower.highlight-cursor-head .cursor-dot {
     height: 150px;
     width: 150px;
-    background: rgba(var(--p1), 1);
+    background: #e62b1e;
     mix-blend-mode: difference
 }
 
@@ -2743,7 +2743,7 @@ select {
 .mouse-follower.highlight-cursor-para .cursor-dot {
     height: 100px;
     width: 100px;
-    background: rgba(var(--p1), 1);
+    background: #e62b1e;
     mix-blend-mode: difference
 }
 

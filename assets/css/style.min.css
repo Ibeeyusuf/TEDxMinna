@@ -1171,7 +1171,7 @@ select {
 .mouse-follower.highlight-cursor-head .cursor-dot {
     height: 150px;
     width: 150px;
-    background: rgba(var(--n1), 1);
+    background:#e62b1e ;
     mix-blend-mode: difference
 }
 
@@ -1194,7 +1194,7 @@ select {
 .mouse-follower.highlight-cursor-para .cursor-dot {
     height: 100px;
     width: 100px;
-    background: rgba(var(--n1), 1);
+    background: #e62b1e;
     mix-blend-mode: difference
 }
 
@@ -1308,7 +1308,7 @@ iframe {
     width: 45px;
     height: 45px;
     right: 30px;
-    background-color: rgba(var(--p1), 1);
+    background-color: #dc3545;
     padding: 0 12px;
     color: rgba(var(--p1), 1);
     line-height: 120%;
